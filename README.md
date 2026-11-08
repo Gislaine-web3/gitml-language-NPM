@@ -7,7 +7,7 @@
 
 <p align="center">
   <strong>Crie sites modernos com GITML puro.</strong><br>
-  HTML semântico, componentes declarativos, CLI e extensão para VS Code.
+  HTML semântico, componentes declarativos, CLI e extensão para VS Code. 
 </p>
 
 <p align="center">
