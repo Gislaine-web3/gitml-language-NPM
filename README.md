@@ -3,7 +3,7 @@
   <img src="assets/GITML-logo.png" alt="GITML — linguagem de marcação para a web" width="960">
 </p>
 
-<h1 align="center">GITML</h1>
+<h1 align="center">GITML</h1> 
 
 <p align="center">
   <strong>Crie sites modernos com GITML puro.</strong><br>
