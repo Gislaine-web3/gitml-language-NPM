@@ -1,0 +1,19 @@
+<section eyebrow="FALE COM A GENTE" title="Vamos conversar?" subtitle="O formulário é demonstrativo: não envia nada para um servidor.">
+  <grid cols="2" gap="26">
+    <contact title="Envie uma mensagem" action="#" button="Enviar mensagem de teste"></contact>
+    <stack gap="18">
+      <card title="Atendimento" icon="mail" variant="soft">
+        <p>oi@orbit.example</p>
+        <status type="online">Respondemos em até 1 dia útil</status>
+      </card>
+      <card title="Quer ver o produto?" icon="rocket" variant="soft">
+        <p>Explore o painel de demonstração e depois volte aqui.</p>
+        <button href="/painel" variant="primary">Abrir o painel</button>
+      </card>
+      <drawer trigger="Ver política de privacidade" title="Privacidade" side="right">
+        <p>Conteúdo de exemplo. Este site não coleta nem armazena dados pessoais.</p>
+        <badge variant="success">Texto de demonstração</badge>
+      </drawer>
+    </stack>
+  </grid>
+</section>

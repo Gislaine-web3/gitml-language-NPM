@@ -1,0 +1,25 @@
+<section eyebrow="Painel" title="Dashboard">
+  <grid cols="4" gap="20">
+    <metric label="Receita" value="R$ 48.200" delta="+12%" icon="dollar" />
+    <metric label="Usuários" value="3.840" delta="+8%" icon="users" />
+    <metric label="Conversão" value="4,2%" delta="-0,4%" icon="target" />
+    <metric label="Tempo online" value="99,98%" delta="+0,02%" icon="wifi" />
+  </grid>
+  <spacer size="24" />
+  <grid cols="2" gap="24">
+    <chart type="bar" title="Vendas por mês" data="Jan:12,Fev:19,Mar:15,Abr:28,Mai:24,Jun:36" />
+    <chart type="area" title="Visitas" data="Seg:30,Ter:45,Qua:38,Qui:62,Sex:58,Sáb:40,Dom:35" />
+  </grid>
+  <spacer size="24" />
+  <grid cols="2" gap="24">
+    <chart type="donut" title="Origem do tráfego" data="Orgânico:48,Direto:27,Social:15,Email:10" />
+    <card title="Status dos serviços" icon="cpu">
+      <stack gap="12">
+        <status type="online">API</status>
+        <status type="online">Banco de dados</status>
+        <status type="warning">Fila de e-mails</status>
+        <status type="offline">Backup</status>
+      </stack>
+    </card>
+  </grid>
+</section>

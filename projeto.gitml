@@ -1,0 +1,168 @@
+<gitml theme="auto" accent="violet" font="inter" title="GITML Prototipagem Avançada v0.2">
+
+  <!-- DEFINIÇÃO DE VARIÁVEIS DO MOTOR -->
+  <state name="usuario" value="Gislaine" />
+  <state name="tema_escuro" value="true" />
+  <state name="notificacoes" value="5" />
+  <state name="ProgressoGeral" value="70" />
+
+  <!-- COMPONENTE CUSTOMIZADO (Testar escopo e variáveis {{}}) -->
+  <define name="status-card">
+    <card title="Painel de {{modulo}}" icon="cpu" bg="surface" animate="up">
+      <p>Desenvolvido por <strong>{$usuario}</strong>.</p>
+      <badge type="success">Ativo</badge>
+    </card>
+  </define>
+
+  <!-- ESTILO CUSTOMIZADO NATIVO (A extensão deve destacar como CSS puro) -->
+  <style>
+    .custom-gradient-bg {
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+      border: 1px solid rgba(139, 92, 246, 0.2);
+    }
+    .text-glow {
+      text-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+    }
+  </style>
+
+  <!-- BARRA DE NAVEGAÇÃO CONFIGURADA COM ÍCONES NATIVOS -->
+  <nav brand="GITML Workspace" search>
+    <link href="/" icon="home">Início</link>
+    <link href="/dashboard" icon="layout">Dashboard</link>
+    <link href="/configuracoes" icon="settings">Configurações</link>
+    <theme-toggle />
+  </nav>
+
+  <!-- ROTA PRINCIPAL: HOME COM BENTO GRID E LAYOUT SIDEBAR -->
+  <route path="/" title="GITML - Home">
+    <hero 
+      title="A evolução da **marcação declarativa**" 
+      subtitle="Aproveite o autocompletar, hover interativo e validação de tags em tempo real no seu VS Code."
+      cta="Acessar Sistema" 
+      href="#/dashboard"
+    >
+      <typed strings="Menos boilerplate.,Mais componentização.,Sem configurações complexas." loop />
+    </hero>
+
+    <container pad="md" width="large">
+      <split cols="4" gap="md">
+        <!-- Barra lateral usando o novo componente do grupo Estrutura -->
+        <sidebar>
+          <heading title="Navegação" size="h4" />
+          <ul class="stack gap-xs">
+            <li><link href="#/dashboard" icon="activity">Métricas Gerais</link></li>
+            <li><link href="https://github.com/Gislaine-web3/gitml-extension-src" icon="github">Repositório Git</link></li>
+          </ul>
+        </sidebar>
+
+        <!-- Área principal usando estrutura Bento Box -->
+        <div class="col-span-3">
+          <bento gap="sm">
+            <card title="Validação Ativa" icon="shield-check" class="custom-gradient-bg">
+              <p>O validador em tempo real avisa se você esquecer de fechar alguma tag estrutural.</p>
+            </card>
+            
+            <!-- Chamando o componente customizado criado com o <define> -->
+            <status-card modulo="Compilação" />
+            <status-card modulo="Rotas Dinâmicas" />
+          </bento>
+        </div>
+      </split>
+    </container>
+  </route>
+
+  <!-- ROTA 2: DASHBOARD INTERATIVO E GERENCIAMENTO DE ESTADO -->
+  <route path="/dashboard" title="GITML - Painel Informativo">
+    <container pad="md">
+      <heading title="Monitoramento do Sistema" subtitle="Controles reativos acoplados sem JavaScript manual" />
+
+      <grid cols="3" gap="md" mt="sm">
+        <metric title="Notificações na Fila" value="{$notificacoes}" trend="Atualizado" icon="bell" />
+        <metric title="Uso de Memória" value="34MB" trend="-2%" icon="database" />
+        <metric title="Status do Compilador" value="Operacional" icon="check-circle" />
+      </grid>
+
+      <split cols="2" gap="lg" mt="lg">
+        <!-- Bloco de Feedback e Modificadores de Estado -->
+        <card title="Painel de Ações de Estado">
+          <p>Clique abaixo para simular a chegada de novas notificações no topo do layout.</p>
+          <row gap="sm" mt="xs">
+            <button action="inc:notificacoes" variant="primary" icon="plus-circle">Adicionar Notificação</button>
+            <button action="set:notificacoes=0" variant="secondary" icon="refresh-cw">Limpar Tudo</button>
+          </row>
+
+          <p mt="md">Progresso do Deploy Automático:</p>
+          <progress value="{$ProgressoGeral}" max="100" type="violet" />
+          <row gap="xs" mt="xs">
+            <button action="set:ProgressoGeral=30" size="sm" variant="ghost">30%</button>
+            <button action="set:ProgressoGeral=70" size="sm" variant="ghost">70%</button>
+            <button action="set:ProgressoGeral=100" size="sm" variant="ghost">100%</button>
+          </row>
+        </card>
+
+        <!-- Exibição Condicional Avançada baseada nas variáveis de estado -->
+        <card title="Gatilhos de Alerta">
+          <show when="notificacoes > 7">
+            <alert type="danger" title="Sobrecarga de Notificações">A quantidade de alertas na fila ultrapassou o limite operacional seguro.</alert>
+          </show>
+          <show when="notificacoes <= 7">
+            <alert type="success" title="Fila Estável">O volume de dados atual está dentro do esperado.</alert>
+          </show>
+          
+          <!-- Testando Gráficos SVG nativos -->
+          <chart type="line" height="150" mt="sm">
+            <dataset label="Frequência" values="5,10,15,{$notificacoes},20" color="violet" />
+          </chart>
+        </card>
+      </split>
+    </container>
+  </route>
+
+  <!-- ROTA 3: FORMULÁRIOS, BINDINGS E SCRIPTS (Testar gitml.preview.allowScripts) -->
+  <route path="/configuracoes" title="GITML - Configurações">
+    <container pad="md" width="small">
+      <card title="Ajustes de Perfil">
+        <form>
+          <input label="Nome do Desenvolvedor Core" type="text" bind="usuario" />
+          <range label="Porcentagem de Escala" bind="ProgressoGeral" min="0" max="100" />
+          <switch label="Manter Tema Escuro por Padrão" bind="tema_escuro" />
+        </form>
+        
+        <divider mt="md" mb="md" />
+
+        <p>Dados de Depuração: Atualizando como <strong>{$usuario}</strong>.</p>
+      </card>
+    </container>
+  </route>
+
+  <!-- TRATAMENTO GLOBAL DE ROTA NÃO ENCONTRADA (404) -->
+  <notfound>
+    <container pad="xl" align="center">
+      <empty title="Erro 404" description="Esta rota não existe ou foi movida no motor do GITML.">
+        <button href="#/" variant="primary">Retornar à Home</button>
+      </empty>
+    </container>
+  </notfound>
+
+  <!-- SCRIPT COMPLEMENTAR (Testa o destaque de sintaxe JS no editor e execução na prévia) -->
+  <script>
+    console.log("Motor GITML v0.2 carregado com sucesso!");
+    // O VS Code deve colorir isso perfeitamente como JavaScript regular
+    document.addEventListener("DOMContentLoaded", () => {
+      if (typeof GitmlToast !== 'undefined') {
+        GitmlToast("Ambiente de Desenvolvimento Pronto!");
+      }
+    });
+  </script>
+
+  <!-- RODAPÉ COMPACTO -->
+  <footer>
+    <split cols="2">
+      <span class="text-glow">Extensão GITML para VS Code · Licença MIT</span>
+      <row gap="sm" style="justify-content: flex-end;">
+        <social type="github" href="https://github.com/Gislaine-web3/gitml-extension-src" />
+      </row>
+    </split>
+  </footer>
+
+</gitml>

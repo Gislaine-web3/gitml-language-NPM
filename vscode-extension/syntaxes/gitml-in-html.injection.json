@@ -1,0 +1,50 @@
+{
+  "scopeName": "gitml.injection",
+  "injectionSelector": "L:text.html.basic -comment -meta.embedded",
+  "patterns": [
+    {
+      "include": "#gitml-script"
+    }
+  ],
+  "repository": {
+    "gitml-script": {
+      "begin": "(<)((?i:script))\\b(?=[^>]*\\btype\\s*=\\s*[\"']text/gitml[\"'])([^>]*)(>)",
+      "beginCaptures": {
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "entity.name.tag.html"
+        },
+        "3": {
+          "patterns": [
+            {
+              "include": "text.html.basic#attribute"
+            }
+          ]
+        },
+        "4": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "end": "(</)((?i:script))(>)",
+      "endCaptures": {
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "entity.name.tag.html"
+        },
+        "3": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "contentName": "meta.embedded.block.gitml",
+      "patterns": [
+        {
+          "include": "text.html.gitml"
+        }
+      ]
+    }
+  }
+}

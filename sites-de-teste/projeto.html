@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GITML - Mostruario de componentes</title>
+
+  <!-- Motor GITML pela CDN (precisa de internet) -->
+  <script src="https://cdn.jsdelivr.net/gh/Gislaine-web3/gitml-extension-src@main/gitml.js"></script>
+</head>
+<body>
+
+<script type="text/gitml">
+<gitml theme="dark" accent="violet" font="space-grotesk" title="Mostruario GITML">
+
+  <head title="Mostruario GITML" description="Uma pagina que usa um pouco de tudo do GITML." />
+
+  <banner href="#contato">Novo! Esta pagina mostra varios componentes do GITML.</banner>
+
+  <nav brand="GITML" sticky="true">
+    <link href="#layout">Layout</link>
+    <link href="#conteudo">Conteudo</link>
+    <link href="#dados">Dados</link>
+    <link href="#interativos">Interativos</link>
+    <link href="#contato">Contato</link>
+    <theme-toggle />
+  </nav>
+
+  <hero
+    eyebrow="Um pouco de tudo"
+    title="Monte paginas com **GITML**"
+    subtitle="Esta pagina usa dezenas de componentes: cards, grades, abas, tabelas, formularios e mais."
+    cta="Comecar" href="#layout"
+    cta2="Ver no GitHub" href2="https://github.com/Gislaine-web3/gitml-extension-src"
+    variant="center">
+  </hero>
+
+  <section>
+    <marquee>
+      <badge variant="primary">Layout</badge>
+      <badge variant="success">Cards</badge>
+      <badge variant="warning">Dados</badge>
+      <badge variant="danger">Interativos</badge>
+      <badge variant="primary">Formularios</badge>
+      <badge variant="success">Midia</badge>
+    </marquee>
+  </section>
+
+  <section eyebrow="Visao geral" title="Em numeros">
+    <grid cols="4" gap="24">
+      <stat num="70" suffix="+" label="Componentes"></stat>
+      <stat num="1" label="Linha pra usar (CDN)"></stat>
+      <stat num="0" label="Dependencias"></stat>
+      <stat num="100" suffix="%" label="Sem build"></stat>
+    </grid>
+  </section>
+
+  <section id="layout" eyebrow="Layout" title="Grades e colunas">
+    <split>
+      <stack gap="12">
+        <h3>Coluna de texto</h3>
+        <p>O componente <mark>split</mark> cria duas colunas: texto de um lado, midia do outro.</p>
+        <actions>
+          <button href="#" variant="primary">Primario</button>
+          <button href="#" variant="outline">Contorno</button>
+          <button href="#" variant="ghost">Fantasma</button>
+        </actions>
+      </stack>
+      <card title="Coluna de midia" variant="glass">
+        <p muted="true">Aqui poderia entrar uma imagem, video ou outro card.</p>
+      </card>
+    </split>
+    <spacer size="32" />
+    <bento>
+      <card title="Bento 1" icon="star" variant="soft"><p muted="true">Grade estilo Apple.</p></card>
+      <card title="Bento 2" icon="zap" variant="soft"><p muted="true">Blocos de tamanhos variados.</p></card>
+      <card title="Bento 3" icon="heart" variant="soft"><p muted="true">Otimo pra destaques.</p></card>
+    </bento>
+  </section>
+
+  <section id="conteudo" eyebrow="Conteudo" title="Tipografia e texto">
+    <grid cols="2" gap="32">
+      <stack gap="16">
+        <p size="lg">Paragrafo grande com <grad>degrade</grad> no texto.</p>
+        <p>Aceita **negrito**, *italico*, `codigo` e [links](https://github.com).</p>
+        <ul icon="check">
+          <li>Item com icone de check</li>
+          <li>Outro item marcado</li>
+          <li>Mais um item</li>
+        </ul>
+        <quote author="Gislaine">GITML deixa a pagina simples de escrever.</quote>
+        <p>Atalho: <kbd>Ctrl</kbd> + <kbd>S</kbd> pra salvar.</p>
+      </stack>
+      <code title="exemplo.gitml" lang="html">&lt;hero title="Ola" cta="Comecar"&gt;&lt;/hero&gt;</code>
+    </grid>
+  </section>
+
+  <section eyebrow="Recursos" title="O que da pra fazer">
+    <grid cols="3" gap="24">
+      <feature icon="zap" title="Rapido">Sem build, abre direto no navegador.</feature>
+      <feature icon="star" title="Bonito">Componentes com visual pronto.</feature>
+      <feature icon="globe" title="Portavel">Funciona por CDN em qualquer HTML.</feature>
+    </grid>
+  </section>
+
+  <section id="dados" eyebrow="Dados" title="Tabelas e indicadores">
+    <table>
+      <tr><th>Componente</th><th>Grupo</th><th>Uso</th></tr>
+      <tr><td>card</td><td>Cards</td><td>Blocos de conteudo</td></tr>
+      <tr><td>grid</td><td>Layout</td><td>Grade responsiva</td></tr>
+      <tr><td>tabs</td><td>Interativos</td><td>Abas</td></tr>
+    </table>
+    <spacer size="24" />
+    <grid cols="2" gap="32">
+      <stack gap="16">
+        <progress value="80" label="Front-end"></progress>
+        <progress value="65" label="Back-end"></progress>
+        <progress value="90" label="Web3"></progress>
+      </stack>
+      <stack gap="16" align="center">
+        <rating value="5"></rating>
+        <p muted="true">Contagem regressiva:</p>
+        <countdown to="2026-12-31"></countdown>
+      </stack>
+    </grid>
+  </section>
+
+  <section eyebrow="Feedback" title="Avisos">
+    <stack gap="16">
+      <alert type="info" title="Informacao">Isto e um aviso informativo.</alert>
+      <alert type="success" title="Sucesso">Deu tudo certo!</alert>
+      <alert type="warning" title="Atencao">Cuidado com este ponto.</alert>
+      <alert type="danger" title="Erro">Algo precisa ser corrigido.</alert>
+    </stack>
+  </section>
+
+  <section id="interativos" eyebrow="Interativos" title="Abas, perguntas e modal">
+    <tabs>
+      <tab label="Sobre"><p>Esta aba fala sobre o projeto GITML.</p></tab>
+      <tab label="Como usar"><p>Adicione uma linha de CDN e escreva GITML.</p></tab>
+      <tab label="Contato"><p>Fale com a gente pelo formulario abaixo.</p></tab>
+    </tabs>
+    <spacer size="24" />
+    <accordion title="Preciso instalar algo?" open="true">Nao. So uma linha de script pela CDN.</accordion>
+    <accordion title="Funciona offline?">Sim, se voce embutir o motor no proprio HTML.</accordion>
+    <accordion title="Da pra criar componentes?">Sim, com a tag define.</accordion>
+    <spacer size="24" />
+    <actions>
+      <modal trigger="Abrir janela" title="Ola da janela modal">
+        <p>Este e um exemplo de modal do GITML.</p>
+      </modal>
+    </actions>
+  </section>
+
+  <section eyebrow="Opinioes" title="Depoimentos">
+    <carousel>
+      <testimonial name="Marina" role="Dev" rating="5">Escrevi uma landing em minutos.</testimonial>
+      <testimonial name="Carlos" role="Designer" rating="5">Os componentes ja vem bonitos.</testimonial>
+      <testimonial name="Julia" role="PM" rating="5">Facil de ensinar pro time.</testimonial>
+    </carousel>
+  </section>
+
+  <section eyebrow="Historia" title="Linha do tempo">
+    <timeline>
+      <step title="Ideia" date="2026">Nasce a linguagem GITML.</step>
+      <step title="Motor" date="2026">O gitml.js ganha 70+ componentes.</step>
+      <step title="Extensao" date="2026">Realce de sintaxe no VS Code.</step>
+    </timeline>
+  </section>
+
+  <section eyebrow="Planos" title="Escolha um plano">
+    <grid cols="3" gap="24">
+      <pricing tier="Free" price="R$ 0" period="/mes" cta="Comecar" href="#">
+        <ul icon="check"><li>Uso pessoal</li><li>CDN publica</li></ul>
+      </pricing>
+      <pricing tier="Pro" price="R$ 29" period="/mes" featured="true" cta="Assinar" href="#">
+        <ul icon="check"><li>Suporte</li><li>Temas extras</li><li>Componentes pro</li></ul>
+      </pricing>
+      <pricing tier="Time" price="R$ 99" period="/mes" cta="Falar" href="#">
+        <ul icon="check"><li>Varios usuarios</li><li>Prioridade</li></ul>
+      </pricing>
+    </grid>
+  </section>
+
+  <section eyebrow="Midia" title="Imagem, video e mapa">
+    <grid cols="3" gap="24">
+      <image src="https://picsum.photos/400/260" alt="Exemplo"></image>
+      <video src="https://youtu.be/dQw4w9WgXcQ"></video>
+      <map q="Sao Paulo"></map>
+    </grid>
+  </section>
+
+  <section id="contato" eyebrow="Contato" title="Fale com a gente">
+    <grid cols="2" gap="32">
+      <form action="#" method="post">
+        <input label="Nome" name="nome" placeholder="Seu nome" required="true"></input>
+        <input label="E-mail" type="email" name="email" placeholder="voce@email.com" required="true"></input>
+        <select label="Assunto" name="assunto" options="Duvida,Sugestao,Bug"></select>
+        <textarea label="Mensagem" name="msg" placeholder="Escreva aqui..."></textarea>
+        <submit>Enviar</submit>
+      </form>
+      <stack gap="16">
+        <h3>Assine a newsletter</h3>
+        <p muted="true">Receba novidades do GITML.</p>
+        <newsletter placeholder="voce@email.com" button="Inscrever"></newsletter>
+        <divider text="ou" />
+        <team name="Gislaine" role="Criadora do GITML"></team>
+      </stack>
+    </grid>
+  </section>
+
+  <cta title="Gostou do GITML?" button="Comecar agora" href="#layout">
+    Uma linha de CDN e voce ja esta montando paginas.
+  </cta>
+
+  <footer brand="GITML">
+    <link href="#layout">Layout</link>
+    <link href="#dados">Dados</link>
+    <link href="#interativos">Interativos</link>
+    <link href="https://github.com/Gislaine-web3/gitml-extension-src">GitHub</link>
+    <p muted="true">Feito com GITML.</p>
+  </footer>
+
+</gitml>
+</script>
+
+</body>
+</html>

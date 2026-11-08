@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR" theme="dark" accent="blue" font="jakarta" icon="🪐">
+
+  <head>
+    <title>Orbit — gestão de projetos para times que entregam</title>
+    <meta name="description" content="Orbit: planeje, acompanhe e entregue projetos em um só lugar. Site de demonstração feito 100% em GITML.">
+    <meta name="author" content="Equipe Orbit">
+    <style>
+      .orbit .g-hero h1 { letter-spacing: -.045em; }
+      .orbit .destaque-box { border: 1px dashed var(--g-line); border-radius: 16px; padding: 20px; }
+      .orbit .selo { display: inline-block; padding: 4px 12px; border-radius: 99px; background: var(--g-soft); font-size: 13px; }
+    </style>
+  </head>
+
+  <body class="orbit">
+
+    <!-- Menu e rodapé ficam em arquivos separados (componentes reutilizáveis) -->
+    <include src="components/menu.gitml" />
+
+    <!-- ===== PÁGINA INICIAL ===== -->
+    <route path="/" title="Início">
+
+      <hero
+        eyebrow="NOVO · ORBIT 2.0"
+        title="Projetos em órbita, **entregas no prazo.**"
+        subtitle="Planeje, acompanhe e entregue com seu time em um só lugar. Sem planilhas soltas, sem reunião de status que poderia ser um e-mail."
+        cta="Ver o painel" href="/painel"
+        cta2="Planos e preços" href2="/precos">
+      </hero>
+
+      <marquee>EQUIPES DE PRODUTO · AGÊNCIAS · STARTUPS · ESCOLAS · ONGs · TIMES REMOTOS ·</marquee>
+
+      <section id="recursos" eyebrow="O QUE VOCÊ GANHA" title="Tudo o que o time precisa, nada que atrapalha" subtitle="Funcionalidades pensadas para quem entrega, não para quem preenche formulário.">
+        <grid cols="3" gap="22">
+          <feature icon="layers" title="Quadros flexíveis">Kanban, lista e linha do tempo sobre os mesmos dados.</feature>
+          <feature icon="zap" title="Automações">Mova tarefas, avise pessoas e feche ciclos sozinho.</feature>
+          <feature icon="chart" title="Métricas reais">Velocidade, prazos e gargalos em gráficos claros.</feature>
+          <feature icon="users" title="Colaboração">Comentários, menções e revisão no próprio cartão.</feature>
+          <feature icon="shield" title="Segurança">Permissões por projeto e histórico de alterações.</feature>
+          <feature icon="rocket" title="Integrações">Conecte com as ferramentas que você já usa.</feature>
+        </grid>
+      </section>
+
+      <section eyebrow="NÚMEROS DE DEMONSTRAÇÃO" title="Times que usam o Orbit" bg="soft">
+        <grid cols="4" gap="20">
+          <stat num="12" suffix=" mil" prefix="+" label="projetos criados" />
+          <stat num="98" suffix="%" label="satisfação" />
+          <stat num="3" suffix="x" label="menos reuniões" />
+          <stat num="24" suffix="/7" label="suporte humano" />
+        </grid>
+      </section>
+
+      <section eyebrow="COMO FUNCIONA" title="Do zero à primeira entrega em 3 passos">
+        <timeline>
+          <step title="1 · Crie o projeto" date="2 min">Escolha um modelo e convide o time.</step>
+          <step title="2 · Planeje o ciclo" date="10 min">Quebre o trabalho em tarefas e defina responsáveis.</step>
+          <step title="3 · Acompanhe e entregue" date="todo dia">Veja o progresso no painel e ajuste a rota.</step>
+        </timeline>
+      </section>
+
+      <section eyebrow="DEPOIMENTOS" title="Quem usa, recomenda">
+        <grid cols="3" gap="22">
+          <testimonial name="Camila Torres" role="Gerente de produto" rating="5" avatar="CT">Reduzimos as reuniões de status pela metade já no primeiro mês.</testimonial>
+          <testimonial name="Diego Ramos" role="Líder de design" rating="5" avatar="DR">O quadro e a linha do tempo no mesmo lugar mudaram a forma como planejamos.</testimonial>
+          <testimonial name="Paula Nunes" role="Coordenadora" rating="4.8" avatar="PN">Simples de aprender. Meu time inteiro adotou em uma semana.</testimonial>
+        </grid>
+      </section>
+
+      <section eyebrow="DÚVIDAS FREQUENTES" title="Perguntas rápidas">
+        <accordion title="O Orbit é um produto real?">Não. É um site de demonstração criado inteiramente em GITML para testar a linguagem.</accordion>
+        <accordion title="Posso editar este site?">Sim! Abra o arquivo index.gitml, mude qualquer texto e salve: a página recarrega sozinha.</accordion>
+        <accordion title="Como as páginas funcionam?">Cada &lt;route&gt; é uma página. O menu e o rodapé ficam fora das rotas e aparecem em todas.</accordion>
+      </section>
+
+      <cta title="Pronto para colocar seu projeto em órbita?" button="Começar grátis" href="/contato">Teste de graça por 14 dias, sem cartão.</cta>
+
+    </route>
+
+    <!-- ===== PÁGINAS EM ARQUIVOS SEPARADOS (como a pasta pages/ do Next) ===== -->
+    <route path="/painel" title="Painel" src="pages/painel.gitml" />
+    <route path="/precos" title="Preços" src="pages/precos.gitml" />
+    <route path="/contato" title="Contato" src="pages/contato.gitml" />
+
+    <!-- ===== ROTA DINÂMICA: /blog/qualquer-coisa ===== -->
+    <route path="/blog/:slug" title="Artigo">
+      <section eyebrow="ROTA DINÂMICA" title="Artigo do blog">
+        <p class="g-lead">Você abriu o artigo: <strong><param name="slug" /></strong></p>
+        <p>A parte final do endereço (<code>/blog/<em>algo</em></code>) vira o parâmetro <code>slug</code>. Troque o texto na barra de endereço e veja mudar.</p>
+        <button href="/" variant="outline">← Voltar ao início</button>
+      </section>
+    </route>
+
+    <!-- ===== 404 ===== -->
+    <notfound>
+      <section title="404 — página não encontrada">
+        <empty icon="alert" title="Essa órbita não existe">Confira o endereço ou volte ao início.<br><button href="/">Ir para o início</button></empty>
+      </section>
+    </notfound>
+
+    <include src="components/rodape.gitml" />
+
+    <backtotop />
+    <cookie button="Ok">Site de demonstração: não coletamos nem enviamos nenhum dado.</cookie>
+
+  </body>
+</html>

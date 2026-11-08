@@ -1,0 +1,11 @@
+<header>
+  <nav brand="Orbit" sticky>
+    <link href="/">Início</link>
+    <link href="/painel">Painel</link>
+    <link href="/precos">Preços</link>
+    <link href="/blog/novidades-2-0">Blog</link>
+    <link href="/contato">Contato</link>
+    <theme-toggle />
+    <button href="/precos" variant="primary">Começar grátis</button>
+  </nav>
+</header>

@@ -1,0 +1,47 @@
+<section eyebrow="PLANOS" title="Preço simples, sem surpresa" subtitle="Escolha o plano e mude entre mensal e anual com um clique (estado reativo).">
+
+  <state name="anual" value="false" persist />
+
+  <center>
+    <switch label="Cobrança anual (2 meses grátis)" bind="anual" />
+  </center>
+
+  <spacer size="20" />
+
+  <show when="!anual">
+    <grid cols="3" gap="22">
+      <pricing tier="Grátis" price="R$ 0" period="/mês" cta="Começar" href="/contato">
+        <ul icon="check"><li>Até 3 projetos</li><li>Quadros e listas</li><li>Suporte pela comunidade</li></ul>
+      </pricing>
+      <pricing tier="Time" price="R$ 39" period="/usuário/mês" featured cta="Assinar" href="/contato">
+        <ul icon="check"><li>Projetos ilimitados</li><li>Automações</li><li>Métricas avançadas</li><li>Suporte prioritário</li></ul>
+      </pricing>
+      <pricing tier="Empresa" price="Sob consulta" cta="Falar com vendas" href="/contato">
+        <ul icon="check"><li>SSO e auditoria</li><li>SLA dedicado</li><li>Treinamento do time</li></ul>
+      </pricing>
+    </grid>
+  </show>
+
+  <show when="anual">
+    <grid cols="3" gap="22">
+      <pricing tier="Grátis" price="R$ 0" period="/ano" cta="Começar" href="/contato">
+        <ul icon="check"><li>Até 3 projetos</li><li>Quadros e listas</li><li>Suporte pela comunidade</li></ul>
+      </pricing>
+      <pricing tier="Time" price="R$ 32" period="/usuário/mês no anual" featured cta="Assinar" href="/contato">
+        <ul icon="check"><li>Projetos ilimitados</li><li>Automações</li><li>Métricas avançadas</li><li>2 meses grátis</li></ul>
+      </pricing>
+      <pricing tier="Empresa" price="Sob consulta" cta="Falar com vendas" href="/contato">
+        <ul icon="check"><li>SSO e auditoria</li><li>SLA dedicado</li><li>Treinamento do time</li></ul>
+      </pricing>
+    </grid>
+    <center><badge variant="success">Você economiza 2 meses no plano anual</badge></center>
+  </show>
+
+  <spacer size="28" />
+
+  <accordion title="Posso cancelar quando quiser?">Sim, sem multa. (Resposta de demonstração.)</accordion>
+  <accordion title="Tem desconto para ONGs e escolas?">Sim: 50% para organizações sem fins lucrativos. (Resposta de demonstração.)</accordion>
+
+  <spacer size="16" />
+  <center><toast trigger="Testar uma notificação" type="success" message="Plano selecionado (demonstração)!">Plano selecionado</toast></center>
+</section>

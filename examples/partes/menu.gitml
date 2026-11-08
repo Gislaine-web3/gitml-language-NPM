@@ -1,0 +1,7 @@
+<nav brand="GITML App" sticky>
+  <link href="/">Início</link>
+  <link href="/produtos">Produtos</link>
+  <link href="/dashboard">Dashboard</link>
+  <link href="/post/42">Post 42</link>
+  <theme-toggle />
+</nav>

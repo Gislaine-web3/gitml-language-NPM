@@ -1,0 +1,8 @@
+<footer brand="Orbit">
+  <p>Orbit é um produto fictício, criado para demonstrar o GITML.</p>
+  <link href="/">Início</link>
+  <link href="/painel">Painel</link>
+  <link href="/precos">Preços</link>
+  <link href="/contato">Contato</link>
+  <social github="https://github.com/" site="https://example.com" mail="oi@example.com" />
+</footer>

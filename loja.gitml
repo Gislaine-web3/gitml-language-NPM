@@ -1,0 +1,199 @@
+<gitml
+  theme="light"
+  accent="teal"
+  font="manrope"
+  title="Nativa — casa, design e tecnologia"
+  description="Loja fictícia de design e tecnologia criada em GITML puro. Demonstra componentes, semântica HTML5 e interações sem JavaScript de interface.">
+
+  <head lang="pt-BR" />
+  <body class="nativa-store">
+    <banner href="#colecao">Semana do design: frete grátis em compras acima de R$ 299 — conhecer coleção</banner>
+
+    <header>
+      <nav brand="nativa" sticky>
+        <dropdown label="Comprar">
+          <link href="#colecao">Todos os produtos</link>
+          <link href="#casa">Casa & decoração</link>
+          <link href="#tecnologia">Tecnologia</link>
+        </dropdown>
+        <link href="#colecao">Novidades</link>
+        <link href="#manifesto">Nossa história</link>
+        <search placeholder="Buscar no catálogo..." target=".g-product" />
+        <theme-toggle />
+        <button href="#sacola" variant="primary" icon="cart">Sacola ({$sacola})</button>
+      </nav>
+    </header>
+
+    <main id="inicio">
+      <hero
+        variant="split"
+        eyebrow="DESIGN CONSCIENTE · FEITO PARA DURAR"
+        title="Sua casa, com **mais intenção.**"
+        subtitle="Peças bem pensadas para viver melhor. Descubra design brasileiro, materiais responsáveis e tecnologia que simplifica o cotidiano."
+        cta="Explorar a coleção" href="#colecao"
+        cta2="Conhecer a Nativa" href="#manifesto"
+        image="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85">
+        <badge variant="success">● Coleção outono · edição limitada</badge>
+      </hero>
+
+      <section id="beneficios" eyebrow="COMPRAR BEM É VIVER MELHOR" title="Cuidado em cada detalhe" subtitle="Uma experiência de compra transparente, da escolha à entrega.">
+        <grid cols="4" gap="18">
+          <article><feature icon="truck" title="Frete cuidadoso">Grátis acima de R$ 299 para todo o Brasil.</feature></article>
+          <article><feature icon="refresh" title="Troca descomplicada">Você tem 30 dias para decidir com calma.</feature></article>
+          <article><feature icon="shield" title="Compra protegida">Pagamento seguro e dados protegidos.</feature></article>
+          <article><feature icon="leaf" title="Melhores escolhas">Materiais certificados e produção responsável.</feature></article>
+        </grid>
+      </section>
+
+      <section id="colecao" eyebrow="CURADORIA NATIVA" title="Peças para chamar de suas" subtitle="Uma seleção demonstrativa: pesquise, explore as abas e adicione itens à sacola.">
+        <row align="center" justify="between" wrap>
+          <p class="g-muted">Exibindo <strong>6 peças</strong> da coleção</p>
+          <select label="Ordenar por" name="ordenacao" options="Em destaque,Menor preço,Maior preço,Mais avaliados" />
+        </row>
+        <tabs>
+          <tab label="Destaques">
+            <grid cols="3" gap="22">
+              <article>
+                <product name="Luminária Aurora" price="R$ 289" old="R$ 349" image="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=900&q=80" badge="-17%" rating="4.9" href="#sacola" cta="Ver produto">Luz suave, estrutura em alumínio reciclado e três intensidades para criar o clima certo.</product>
+                <button action="inc:sacola" variant="outline" size="sm">Adicionar à sacola</button>
+              </article>
+              <article>
+                <product name="Fone Brisa ANC" price="R$ 459" old="R$ 529" image="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=900&q=80" badge="Mais vendido" rating="4.8" href="#sacola" cta="Ver produto">Som imersivo, cancelamento de ruído e até 32 horas de bateria.</product>
+                <button action="inc:sacola" variant="outline" size="sm">Adicionar à sacola</button>
+              </article>
+              <article>
+                <product name="Vaso Terra P" price="R$ 129" image="https://images.unsplash.com/photo-1578500494198-246f612d3b3d?auto=format&fit=crop&w=900&q=80" badge="Feito no Brasil" rating="5" href="#sacola" cta="Ver produto">Cerâmica artesanal com acabamento natural. Cada peça é única.</product>
+                <button action="inc:sacola" variant="outline" size="sm">Adicionar à sacola</button>
+              </article>
+              <article>
+                <product name="Manta Horizonte" price="R$ 219" image="https://images.unsplash.com/photo-1600210491369-e753d80a41f3?auto=format&fit=crop&w=900&q=80" badge="Algodão orgânico" rating="4.7" href="#sacola" cta="Ver produto">Toque macio, trama encorpada e cores inspiradas na paisagem brasileira.</product>
+                <button action="inc:sacola" variant="outline" size="sm">Adicionar à sacola</button>
+              </article>
+              <article>
+                <product name="Caixa Acústica M1" price="R$ 599" old="R$ 699" image="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=900&q=80" badge="-14%" rating="4.9" href="#sacola" cta="Ver produto">Áudio nítido em um corpo compacto de madeira certificada.</product>
+                <button action="inc:sacola" variant="outline" size="sm">Adicionar à sacola</button>
+              </article>
+              <article>
+                <product name="Garrafa Térmica Vale" price="R$ 149" image="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=900&q=80" badge="Escolha consciente" rating="4.6" href="#sacola" cta="Ver produto">Aço inoxidável, mantém a temperatura e acompanha você por muitos anos.</product>
+                <button action="inc:sacola" variant="outline" size="sm">Adicionar à sacola</button>
+              </article>
+            </grid>
+          </tab>
+          <tab label="Casa">
+            <section id="casa" title="Casa & decoração" subtitle="Materiais honestos, formas simples e acabamento cuidadoso.">
+              <grid cols="3"><card title="Luz para desacelerar" icon="sun" variant="soft">Luminárias pensadas para criar conforto visual.</card><card title="Texturas naturais" icon="leaf" variant="soft">Algodão orgânico, madeira certificada e cerâmica local.</card><card title="Objetos com história" icon="heart" variant="soft">Peças de pequenos ateliês e fornecedores brasileiros.</card></grid>
+            </section>
+          </tab>
+          <tab label="Tecnologia">
+            <section id="tecnologia" title="Tecnologia para o cotidiano" subtitle="Recursos úteis, design durável e menos complicação.">
+              <grid cols="3"><card title="Som que acompanha" icon="headphones">Áudio com conforto para trabalhar, caminhar e descansar.</card><card title="Conectividade simples" icon="wifi">Dispositivos fáceis de configurar e usar todos os dias.</card><card title="Energia com propósito" icon="zap">Produtos projetados para eficiência e vida útil longa.</card></grid>
+            </section>
+          </tab>
+        </tabs>
+      </section>
+
+      <section id="sacola" eyebrow="SUA SACOLA DEMONSTRATIVA" title="A experiência começa aqui" subtitle="Os botões de adicionar atualizam a quantidade usando estado reativo GITML. Não há checkout ou pagamento conectado.">
+        <state name="sacola" value="0" persist />
+        <grid cols="2" gap="24">
+          <article>
+            <card title="Resumo da sacola" icon="cart" variant="soft">
+              <p>Itens adicionados nesta sessão:</p>
+              <metric label="Itens na sacola" value="{$sacola}" delta="pronto para explorar" icon="shopping-bag" />
+              <progress value="72" label="Progresso para frete grátis" />
+              <p class="g-muted">Adicione produtos para experimentar o estado reativo.</p>
+              <actions><button action="inc:sacola" variant="primary">Adicionar item de teste</button><button action="reset:sacola" variant="outline">Esvaziar contador</button></actions>
+            </card>
+          </article>
+          <aside>
+            <alert type="info" title="Demonstração, não uma loja real">Os produtos, preços, ações de sacola, formulários e ofertas são ilustrativos. Não há estoque, venda, conta ou pagamento ativos.</alert>
+            <toast trigger="Testar notificação" type="success" message="Interação demonstrativa do GITML.">Mostrar aviso</toast>
+            <drawer trigger="Ver política de entrega" title="Entrega com cuidado" side="right"><p>Conteúdo demonstrativo: prazos e condições reais devem ser configurados pela loja responsável.</p><badge variant="success">Informação de exemplo</badge></drawer>
+          </aside>
+        </grid>
+      </section>
+
+      <section id="manifesto" eyebrow="MENOS, MAS MELHOR" title="Design que respeita o tempo" subtitle="A Nativa é uma loja fictícia criada para mostrar uma página de comércio completa feita somente com marcação GITML.">
+        <split>
+          <article>
+            <p class="g-lead">Acreditamos que bons objetos não precisam gritar. Eles precisam funcionar, durar e fazer sentido na sua casa.</p>
+            <ul icon="check"><li>Curadoria independente e produção transparente.</li><li>Materiais pensados para uso prolongado.</li><li>Design brasileiro com atenção aos detalhes.</li></ul>
+            <quote author="Manifesto Nativa">Escolher menos. Escolher melhor. Viver com mais intenção.</quote>
+            <button href="#newsletter" variant="primary">Receber novidades</button>
+          </article>
+          <figure src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1100&q=85" alt="Sala contemporânea com móveis e materiais naturais" caption="Ambientes reais começam com escolhas que fazem sentido." />
+        </split>
+      </section>
+
+      <section id="experiencia" eyebrow="GITML EM AÇÃO" title="Uma loja. Muitos componentes." subtitle="Esta página combina componentes prontos com elementos HTML5 semânticos: header, nav, main, section, article, aside, figure e footer.">
+        <grid cols="3" gap="20">
+          <article><stat num="167" suffix="+" label="componentes no catálogo" /></article>
+          <article><stat num="82" label="ícones disponíveis" /></article>
+          <article><stat num="0" label="linhas de JavaScript de interface" /></article>
+        </grid>
+        <spacer size="24" />
+        <grid cols="2" gap="20">
+          <article><card title="Acessível e estruturado" icon="accessibility"><p>Seções semânticas, textos alternativos, labels de formulário e foco em leitura clara.</p><status type="online">Estrutura pronta</status></card></article>
+          <article><card title="Dados de demonstração" icon="chart"><p>Indicadores e visualizações nativas mostram como reunir informação na interface.</p><sparkline values="12,18,15,26,22,34,31,42" /><rating value="4.8" /></card></article>
+        </grid>
+        <chart type="bar" title="Interesse demonstrativo por categoria" data="Casa:38,Áudio:29,Iluminação:24,Outdoor:18" height="280" />
+        <marquee>DESIGN BRASILEIRO · ESCOLHAS CONSCIENTES · FEITO PARA DURAR ·</marquee>
+        <carousel>
+          <card title="Escolha consciente" icon="leaf" variant="gradient">Materiais e origem apresentados com transparência.</card>
+          <card title="Design atemporal" icon="star" variant="gradient">Peças pensadas para acompanhar mudanças e novos ciclos.</card>
+          <card title="Tecnologia útil" icon="zap" variant="gradient">Inovação que resolve necessidades do dia a dia.</card>
+        </carousel>
+      </section>
+
+      <section id="comunidade" eyebrow="QUEM ESCOLHE COM INTENÇÃO" title="Histórias da comunidade">
+        <grid cols="3">
+          <article><testimonial name="Marina Costa" role="Cliente desde 2024" rating="5" avatar="MC">A curadoria é linda e a descrição dos materiais me ajudou a escolher sem pressa.</testimonial></article>
+          <article><testimonial name="Rafael Lima" role="Cliente desde 2023" rating="5" avatar="RL">Comprei para presentear e gostei da atenção aos detalhes da embalagem.</testimonial></article>
+          <article><testimonial name="Ana Souza" role="Cliente desde 2025" rating="4.8" avatar="AS">Peças funcionais, bonitas e que combinam com a casa de verdade.</testimonial></article>
+        </grid>
+        <avatars><avatar name="Marina Costa" /><avatar name="Rafael Lima" /><avatar name="Ana Souza" /></avatars>
+      </section>
+
+      <section id="atendimento" eyebrow="ESTAMOS POR PERTO" title="Dúvidas? Vamos conversar" subtitle="Formulário demonstrativo: conecte uma ação de backend antes de coletar informações reais.">
+        <grid cols="2" gap="24">
+          <article>
+            <form action="#" method="get">
+              <input label="Seu nome" name="nome" placeholder="Como podemos chamar você?" required />
+              <input label="E-mail" name="email" type="email" placeholder="voce@exemplo.com" required />
+              <select label="Assunto" name="assunto" options="Dúvida sobre produto,Entrega e troca,Parcerias" />
+              <textarea label="Mensagem" name="mensagem" placeholder="Escreva sua mensagem..." />
+              <checkbox name="privacidade" label="Li o aviso de privacidade demonstrativo" required />
+              <submit>Enviar mensagem de teste</submit>
+            </form>
+          </article>
+          <aside>
+            <card title="Prefere receber novidades?" icon="mail" variant="soft">
+              <p>Cadastre-se para ver o componente de newsletter em ação.</p>
+              <newsletter placeholder="Seu melhor e-mail" button="Quero receber" action="#newsletter" />
+              <p><small>Este formulário é uma demonstração e não envia dados para um servidor.</small></p>
+            </card>
+            <accordion title="As compras são reais?">Não. A Nativa é uma marca fictícia; links, preços, depoimentos e formulários são apenas demonstrativos.</accordion>
+            <accordion title="Como funciona o GITML?">O arquivo .gitml combina componentes da linguagem e tags HTML5. O runtime transforma a marcação em uma página para o navegador.</accordion>
+            <accordion title="Como executar localmente?">Na raiz do projeto, rode: node bin/gitml.js dev loja.gitml --port 3000 --open</accordion>
+          </aside>
+        </grid>
+      </section>
+
+      <section id="newsletter" eyebrow="CARTA NATIVA" title="Ideias boas chegam sem pressa" subtitle="Um boletim fictício sobre design, materiais e vida cotidiana.">
+        <newsletter placeholder="Seu e-mail" button="Assinar a carta" action="#newsletter" />
+        <p align="center"><small>Sem spam. Esta demonstração não coleta nem envia dados.</small></p>
+      </section>
+    </main>
+
+    <footer brand="nativa">
+      <p>Loja demonstrativa desenvolvida inteiramente em GITML puro. Produtos, imagens, preços e depoimentos são ilustrativos.</p>
+      <address>Projeto-exemplo para demonstração da linguagem GITML.</address>
+      <link href="#inicio">Voltar ao início</link>
+      <link href="#colecao">Coleção</link>
+      <link href="#manifesto">Manifesto</link>
+      <social instagram="https://instagram.com/" site="https://example.com" mail="oi@example.com" />
+    </footer>
+
+    <cookie button="Entendi">Este site de demonstração não usa cookies para vender ou rastrear.</cookie>
+    <backtotop />
+  </body>
+</gitml>

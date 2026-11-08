@@ -1,0 +1,3 @@
+#!/bin/sh
+# Atalho do comando `gitml` (Git Bash / Linux / Mac)
+exec node "$(dirname "$0")/gitml.js" "$@"

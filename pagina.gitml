@@ -1,0 +1,21 @@
+<script type="text/gitml">
+<gitml theme="dark" accent="violet" font="space-grotesk" title="Meu teste">
+
+  <nav brand="Meu Site">
+    <link href="#">Início</link>
+    <theme-toggle />
+  </nav>
+
+  <hero
+    eyebrow="Teste GITML"
+    title="Olá, **mundo!**"
+    subtitle="Se você está vendo isto, o GITML está funcionando."
+    cta="Começar" href="#">
+  </hero>
+
+  <section title="Minha seção">
+    <p>Escreva aqui. Aceita **negrito**, *itálico* e `código`.</p>
+  </section>
+
+</gitml>
+</script>

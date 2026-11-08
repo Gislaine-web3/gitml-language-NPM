@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Demonstração da plataforma TelaPlay escrita em GITML dentro de HTML.">
+  <title>TelaPlay — demonstração GITML dentro de HTML</title>
+  <style>html{background:#07080d}</style>
+  <script defer  src="./gitml.js" charset="utf-8" onerror="var l=document.getElementById('gitml-loading');if(l)l.innerHTML='<b>gitml.js</b> não foi encontrado ao lado deste arquivo. Abra o site com <code>gitml start</code> (terminal do VS Code) ou botão 🌐 da extensão, ou copie o gitml.js para esta pasta.'"></script>
+</head>
+<body>
+  <p id="gitml-loading" style="font:16px/1.6 system-ui,sans-serif;color:#e8eaf2;background:#10121a;border:1px solid #262b3d;border-radius:14px;max-width:640px;margin:48px auto;padding:20px 24px">Carregando GITML… se esta mensagem não sumir, o <b>gitml.js</b> não foi carregado (abra o Console com F12).</p>
+  <!-- A mesma demonstração de index.gitml, agora escrita dentro de HTML. -->
+  <script type="text/gitml">
+    <gitml
+      theme="dark"
+      accent="violet"
+      font="space-grotesk"
+      title="TelaPlay — TV e streaming em um só lugar"
+      description="Demonstração de um site de TV e streaming criado inteiramente com GITML.">
+
+      <head lang="pt-BR" />
+
+      <header>
+        <nav brand="TelaPlay" sticky>
+          <link href="#ao-vivo">Ao vivo</link>
+          <link href="#catalogo">Catálogo</link>
+          <link href="#como-funciona">Como funciona</link>
+          <theme-toggle />
+          <button href="#planos" variant="primary">Ver planos</button>
+        </nav>
+      </header>
+
+      <main>
+        <hero
+          eyebrow="SUA PROGRAMAÇÃO, DO SEU JEITO"
+          title="Entre no universo **TelaPlay**"
+          subtitle="Uma demonstração de experiência de TV online construída com GITML: páginas, seções, cartões, abas, formulários e semântica HTML5 — tudo em um arquivo .gitml."
+          cta="Explorar canais" href="#ao-vivo"
+          cta2="Conhecer a plataforma" href2="#como-funciona"
+          variant="split">
+          <badge variant="success">● Plataforma de demonstração</badge>
+        </hero>
+
+        <section id="ao-vivo" eyebrow="NO AR AGORA" title="Canais ao vivo" subtitle="Canais fictícios para demonstrar componentes. Nenhuma transmissão real está incluída.">
+          <grid cols="4" gap="20">
+            <article>
+              <card title="Aurora News" icon="globe" variant="soft">
+                <badge variant="danger">AO VIVO</badge>
+                <p>Jornal da manhã · Atualidades</p>
+                <button href="#catalogo" variant="outline" size="sm">Assistir</button>
+              </card>
+            </article>
+            <article>
+              <card title="Arena Play" icon="play" variant="soft">
+                <badge variant="danger">AO VIVO</badge>
+                <p>Esporte em foco · Debate</p>
+                <button href="#catalogo" variant="outline" size="sm">Assistir</button>
+              </card>
+            </article>
+            <article>
+              <card title="Cozinha Viva" icon="heart" variant="soft">
+                <badge variant="danger">AO VIVO</badge>
+                <p>Receitas da estação · Ao vivo</p>
+                <button href="#catalogo" variant="outline" size="sm">Assistir</button>
+              </card>
+            </article>
+            <article>
+              <card title="Pequenos Astros" icon="sparkles" variant="soft">
+                <badge variant="danger">AO VIVO</badge>
+                <p>Desenhos e diversão · Infantil</p>
+                <button href="#catalogo" variant="outline" size="sm">Assistir</button>
+              </card>
+            </article>
+          </grid>
+        </section>
+
+        <section id="catalogo" eyebrow="ESCOLHA O QUE VER" title="Um catálogo para cada momento" subtitle="Use abas GITML para organizar conteúdos sem escrever JavaScript de interface.">
+          <tabs>
+            <tab label="Destaques">
+              <grid cols="3">
+                <article>
+                  <figure>
+                    <image src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=900&q=80" alt="Sala de cinema com tela iluminada" />
+                    <figcaption>Especial da semana</figcaption>
+                  </figure>
+                  <card title="Noite de Cinema" icon="play">
+                    <p>Uma seleção fictícia de filmes para curtir em casa.</p>
+                    <button href="#planos" variant="primary">Ver detalhes</button>
+                  </card>
+                </article>
+                <article>
+                  <figure>
+                    <image src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=900&q=80" alt="Poltrona de cinema diante da tela" />
+                    <figcaption>Séries para maratonar</figcaption>
+                  </figure>
+                  <card title="Histórias em Série" icon="layers">
+                    <p>Descubra novas histórias em uma vitrine demonstrativa.</p>
+                    <button href="#planos" variant="primary">Explorar séries</button>
+                  </card>
+                </article>
+                <article>
+                  <figure>
+                    <image src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=900&q=80" alt="Céu estrelado ao anoitecer" />
+                    <figcaption>Para toda a família</figcaption>
+                  </figure>
+                  <card title="Mundo Curioso" icon="sparkles">
+                    <p>Conteúdo educativo e entretenimento para todas as idades.</p>
+                    <button href="#planos" variant="primary">Descobrir</button>
+                  </card>
+                </article>
+              </grid>
+            </tab>
+            <tab label="Filmes">
+              <section title="Sessão de cinema">
+                <p>Esta aba ilustra como agrupar uma categoria de catálogo com componentes GITML.</p>
+                <grid cols="3">
+                  <card title="Aventura Azul" icon="globe" variant="gradient">Filme fictício · Aventura</card>
+                  <card title="O Último Horizonte" icon="star" variant="gradient">Filme fictício · Drama</card>
+                  <card title="Ritmo da Cidade" icon="play" variant="gradient">Filme fictício · Música</card>
+                </grid>
+              </section>
+            </tab>
+            <tab label="Séries">
+              <section title="Continue explorando">
+                <grid cols="3">
+                  <card title="Órbita 9" icon="moon">Série fictícia · Ficção científica</card>
+                  <card title="Entre Ruas" icon="globe">Série fictícia · Drama</card>
+                  <card title="Código Aberto" icon="code">Série fictícia · Tecnologia</card>
+                </grid>
+              </section>
+            </tab>
+          </tabs>
+        </section>
+
+        <section id="como-funciona" eyebrow="FEITO COM GITML" title="Um arquivo. Uma página completa.">
+          <grid cols="3">
+            <article><feature icon="code" title="Marcação semântica">Organize a página com header, nav, main, section, article, aside, figure e footer.</feature></article>
+            <article><feature icon="layers" title="Componentes prontos">Combine hero, grid, card, badge, tabs e botões em uma sintaxe declarativa.</feature></article>
+            <article><feature icon="sparkles" title="Estilo responsivo">Tema, cores, tipografia e comportamento adaptáveis já vêm com o runtime.</feature></article>
+          </grid>
+        </section>
+
+        <section id="planos" eyebrow="SUA EXPERIÊNCIA" title="Uma demonstração, várias possibilidades">
+          <grid cols="2">
+            <article>
+              <card title="Para assistir" icon="play" variant="soft">
+                <p>Esta página é uma demonstração visual. Adicione seus próprios conteúdos, serviços e integrações ao projeto.</p>
+                <actions>
+                  <button href="#catalogo" variant="primary">Ver catálogo</button>
+                  <button href="#duvidas" variant="outline">Tirar dúvidas</button>
+                </actions>
+              </card>
+            </article>
+            <aside>
+              <alert type="info" title="Importante">
+                O exemplo não fornece canais, playlists, assinaturas, contas ou transmissões. Use apenas conteúdo e serviços que você tem autorização para distribuir.
+              </alert>
+            </aside>
+          </grid>
+        </section>
+
+        <section id="duvidas" eyebrow="PERGUNTAS" title="Sobre esta página">
+          <accordion title="Este arquivo é HTML?">Não. Este exemplo é escrito em GITML puro. O compilador gera o HTML final para o navegador.</accordion>
+          <accordion title="A transmissão de vídeo está funcionando?">Não. Os canais e programas são fictícios e os botões demonstram navegação; nenhuma transmissão está conectada.</accordion>
+          <accordion title="Como abrir a página?">Use a prévia da extensão GITML no VS Code ou gere o HTML com a CLI: node bin/gitml.js build index.gitml.</accordion>
+        </section>
+      </main>
+
+      <footer brand="TelaPlay">
+        <p>Projeto demonstrativo criado inteiramente com GITML. Use conteúdo autorizado e respeite os direitos de distribuição.</p>
+        <link href="#ao-vivo">Ao vivo</link>
+        <link href="#catalogo">Catálogo</link>
+        <link href="#como-funciona">Sobre o GITML</link>
+      </footer>
+    </gitml>
+  </script>
+</body>
+</html>

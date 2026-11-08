@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GITML Viewer</title>
+  <style>
+    html{background:#07080d}body{margin:0;min-height:100vh;display:grid;place-items:center;font:16px/1.6 system-ui,sans-serif;color:#e8eaf2}
+    .c{width:min(560px,92vw);background:#10121a;border:1px solid #262b3d;border-radius:18px;padding:28px}
+    h1{margin:0 0 6px;font-size:22px}p{color:#9aa3b5;margin:0 0 16px}code{background:#0b0d15;padding:2px 6px;border-radius:6px}
+    form{display:flex;gap:8px}input{flex:1;font:inherit;color:inherit;background:#0b0d15;border:1px solid #262b3d;border-radius:10px;padding:10px 12px}
+    button{font:inherit;color:#fff;background:#7c5cff;border:0;border-radius:10px;padding:10px 16px;cursor:pointer}
+  </style>
+  <script src="./gitml.js" charset="utf-8"></script>
+</head>
+<body>
+  <div class="c">
+    <h1>GITML Viewer</h1>
+    <p>Abre um arquivo <code>.gitml</code> em servidores estáticos (<code>npx serve</code>, <code>python -m http.server</code>…), que sozinhos só baixam o arquivo.</p>
+    <form onsubmit="location.search='?src='+encodeURIComponent(this.src.value||'index.gitml');return false">
+      <input name="src" value="index.gitml" aria-label="Arquivo .gitml"><button>Abrir</button>
+    </form>
+  </div>
+</body>
+</html>

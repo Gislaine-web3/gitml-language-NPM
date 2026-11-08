@@ -1,0 +1,43 @@
+{
+  "name": "gitml",
+  "version": "0.1.2",
+  "description": "Linguagem declarativa que transforma tags simples em páginas e apps modernos — rotas, estado, componentes e HTML puro, sem build.",
+  "main": "gitml.js",
+  "bin": {
+    "gitml": "bin/gitml.js"
+  },
+  "files": [
+    "gitml.js",
+    "server.js",
+    "bin",
+    "examples",
+    "docs",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "dev": "node bin/gitml.js dev .",
+    "start": "node bin/gitml.js start",
+    "demo": "node bin/gitml.js dev examples/app.gitml",
+    "build": "node bin/gitml.js build index.gitml",
+    "check": "node bin/gitml.js check index.gitml examples/app.gitml",
+    "sync": "node scripts/sync.js",
+    "test": "node test/run.js && node test/cli-server.test.js && node test/extension.test.js",
+    "vsix": "node scripts/build-vsix.js"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "keywords": [
+    "gitml",
+    "linguagem",
+    "markup",
+    "paginas",
+    "componentes",
+    "spa",
+    "router",
+    "html"
+  ],
+  "author": "Gislaine Cristina Lopes Fernandes",
+  "license": "MIT"
+}

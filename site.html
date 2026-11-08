@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meu teste GITML</title>
+
+  <!-- Motor GITML local (mesma pasta). Para usar pela CDN, troque o src por:
+       https://cdn.jsdelivr.net/gh/Gislaine-web3/gitml-extension-src@main/gitml.js -->
+  <style>html{background:#07080d}</style>
+  <script src="./gitml.js"  data-src="pagina.gitml" charset="utf-8" onerror="var l=document.getElementById('gitml-loading');if(l)l.innerHTML='<b>gitml.js</b> não foi encontrado ao lado deste arquivo. Abra o site com <code>gitml start</code> (terminal do VS Code) ou botão 🌐 da extensão, ou copie o gitml.js para esta pasta.'"></script>
+</head>
+<body>
+  <p id="gitml-loading" style="font:16px/1.6 system-ui,sans-serif;color:#e8eaf2;background:#10121a;border:1px solid #262b3d;border-radius:14px;max-width:640px;margin:48px auto;padding:20px 24px">Carregando GITML… se esta mensagem não sumir, o <b>gitml.js</b> não foi carregado (abra o Console com F12).</p>
+
+<!-- Escreva seu GITML aqui dentro -->
+<script type="text/gitml">
+<gitml theme="dark" accent="violet" font="space-grotesk" title="Meu teste">
+
+  <nav brand="Meu Site">
+    <link href="#">Início</link>
+    <theme-toggle />
+  </nav>
+
+  <hero
+    eyebrow="Teste GITML"
+    title="Olá, **mundo!**"
+    subtitle="Se você está vendo isto, o GITML está funcionando."
+    cta="Começar" href="#">
+  </hero>
+
+  <section title="Minha seção">
+    <p>Escreva aqui. Aceita **negrito**, *itálico* e `código`.</p>
+  </section>
+
+</gitml>
+</script>
+
+</body>
+</html>

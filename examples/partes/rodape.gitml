@@ -1,0 +1,5 @@
+<footer brand="GITML App">
+  <link href="/">Início</link>
+  <link href="https://github.com/Gislaine-web3/gitml-extension-src">GitHub</link>
+  <p muted="true">Feito com GITML.</p>
+</footer>

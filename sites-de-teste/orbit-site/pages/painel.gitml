@@ -1,0 +1,59 @@
+<section eyebrow="VISÃO GERAL" title="Painel do projeto" subtitle="Dados fictícios. Troque o período e veja o gráfico mudar usando só estado GITML.">
+
+  <state name="periodo" value="semana" />
+
+  <center>
+    <actions>
+      <button action="set:periodo=semana" variant="primary" size="sm">Semana</button>
+      <button action="set:periodo=mes" variant="outline" size="sm">Mês</button>
+      <button action="set:periodo=ano" variant="outline" size="sm">Ano</button>
+    </actions>
+    <p class="g-muted">Período selecionado: <strong>{$periodo}</strong></p>
+  </center>
+
+  <spacer size="20" />
+
+  <grid cols="4" gap="20">
+    <metric label="Tarefas concluídas" value="128" delta="+14%" icon="check" />
+    <metric label="Em andamento" value="37" delta="+3%" icon="layers" />
+    <metric label="Entregues no prazo" value="94%" delta="+3%" icon="target" />
+    <metric label="Velocidade" value="42 pts" delta="+8%" icon="zap" />
+  </grid>
+
+  <spacer size="24" />
+
+  <grid cols="2" gap="22">
+    <div>
+      <show when="periodo == 'semana'"><chart type="bar" title="Entregas por dia (semana)" data="Seg:8,Ter:12,Qua:9,Qui:15,Sex:11" /></show>
+      <show when="periodo == 'mes'"><chart type="area" title="Entregas por semana (mês)" data="S1:34,S2:41,S3:38,S4:52" /></show>
+      <show when="periodo == 'ano'"><chart type="line" title="Entregas por mês (ano)" data="Jan:120,Fev:140,Mar:132,Abr:170,Mai:160,Jun:190" /></show>
+    </div>
+    <chart type="donut" title="Tarefas por status" data="Concluídas:128,Em andamento:37,Atrasadas:5,Backlog:61" />
+  </grid>
+
+  <spacer size="24" />
+
+  <grid cols="2" gap="22">
+    <card title="Próximas entregas" icon="calendar">
+      <table>
+        <tr><td>Entrega</td><td>Responsável</td><td>Status</td></tr>
+        <tr><td>Redesenho do onboarding</td><td>Camila</td><td><badge variant="success">No prazo</badge></td></tr>
+        <tr><td>API de relatórios</td><td>Diego</td><td><badge variant="warning">Atenção</badge></td></tr>
+        <tr><td>App mobile 2.0</td><td>Paula</td><td><badge variant="danger">Atrasada</badge></td></tr>
+      </table>
+    </card>
+    <card title="Saúde dos serviços" icon="cpu">
+      <stack gap="12">
+        <status type="online">Aplicação web</status>
+        <status type="online">API pública</status>
+        <status type="warning">Fila de e-mails</status>
+        <status type="offline">Backup noturno</status>
+        <progress value="82" label="Meta do trimestre" />
+        <sparkline values="4,7,6,10,9,14,13,18" />
+      </stack>
+    </card>
+  </grid>
+
+  <spacer size="20" />
+  <alert type="info" title="Dados fictícios">Nada aqui vem de um servidor: são números de exemplo para testar componentes.</alert>
+</section>

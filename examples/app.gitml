@@ -1,0 +1,57 @@
+<!-- App de várias páginas, estilo Next/React: rotas + estado + includes -->
+<gitml theme="dark" accent="violet" font="space-grotesk" title="GITML App" description="Exemplo de app completo em GITML" icon="⚡">
+
+  <include src="partes/menu.gitml" />
+
+  <!-- Página inicial -->
+  <route path="/" title="Início">
+    <hero eyebrow="GITML 0.1" title="Apps completos com **uma linguagem**" subtitle="Rotas, estado, componentes e dados — sem escrever HTML, CSS nem JavaScript." cta="Ver produtos" href="/produtos" cta2="Dashboard" href2="/dashboard"></hero>
+
+    <section eyebrow="Estado" title="Reatividade sem JavaScript">
+      <state name="n" value="0" />
+      <state name="ativo" value="false" />
+      <center>
+        <p size="lg">Contador: <strong>{$n}</strong></p>
+        <actions>
+          <button action="dec:n" variant="outline">−1</button>
+          <button action="inc:n">+1</button>
+          <button action="reset:n" variant="ghost">Zerar</button>
+        </actions>
+        <show when="n >= 5"><alert type="success" title="Passou de 5!">Condições com <mark>show</mark> aparecem sozinhas.</alert></show>
+        <switch label="Modo avançado" bind="ativo" />
+        <show when="ativo"><alert type="info" title="Avançado ligado">Este bloco depende do estado <code>ativo</code>.</alert></show>
+      </center>
+    </section>
+
+    <section eyebrow="Compilação" title="Repetição com each">
+      <grid cols="3" gap="20">
+        <each items="Rápido,Moderno,Completo" as="x">
+          <feature icon="sparkles" title="{{x}}">Item número {{index}} gerado por <mark>each</mark>.</feature>
+        </each>
+      </grid>
+    </section>
+  </route>
+
+  <!-- Páginas em arquivos separados (como a pasta pages/ do Next) -->
+  <route path="/produtos" title="Produtos" src="paginas/produtos.gitml" />
+  <route path="/dashboard" title="Dashboard" src="paginas/dashboard.gitml" />
+
+  <!-- Rota dinâmica -->
+  <route path="/post/:id" title="Post">
+    <section eyebrow="Rota dinâmica" title="Rota com parâmetro">
+      <h3>Você está vendo o post <param name="id" /></h3>
+      <p>O parâmetro da URL aparece com <code>&lt;param name="id"&gt;</code>.</p>
+      <button href="/" variant="outline">← Voltar</button>
+    </section>
+  </route>
+
+  <notfound>
+    <section title="404">
+      <empty icon="alert" title="Página não encontrada"><button href="/">Ir para o início</button></empty>
+    </section>
+  </notfound>
+
+  <include src="partes/rodape.gitml" />
+  <backtotop />
+  <cookie>Usamos cookies só para lembrar suas preferências.</cookie>
+</gitml>

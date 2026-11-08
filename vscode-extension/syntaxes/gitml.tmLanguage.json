@@ -1,0 +1,214 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "GITML",
+  "scopeName": "text.html.gitml",
+  "patterns": [
+    {
+      "include": "#comment"
+    },
+    {
+      "include": "#style-block"
+    },
+    {
+      "include": "#script-block"
+    },
+    {
+      "include": "#interpolation"
+    },
+    {
+      "include": "#binding"
+    },
+    {
+      "include": "#gitml-tag"
+    },
+    {
+      "include": "#other-tag"
+    },
+    {
+      "include": "#inline-markdown"
+    }
+  ],
+  "repository": {
+    "comment": {
+      "name": "comment.block.gitml",
+      "begin": "<!--",
+      "end": "-->",
+      "captures": {
+        "0": {
+          "name": "punctuation.definition.comment.gitml"
+        }
+      }
+    },
+    "style-block": {
+      "begin": "(<)(style)(\\b[^>]*>)",
+      "end": "(</)(style)(>)",
+      "beginCaptures": {
+        "1": {
+          "name": "punctuation.definition.tag.begin.gitml"
+        },
+        "2": {
+          "name": "entity.name.tag.gitml"
+        },
+        "3": {
+          "name": "punctuation.definition.tag.end.gitml"
+        }
+      },
+      "endCaptures": {
+        "1": {
+          "name": "punctuation.definition.tag.begin.gitml"
+        },
+        "2": {
+          "name": "entity.name.tag.gitml"
+        },
+        "3": {
+          "name": "punctuation.definition.tag.end.gitml"
+        }
+      },
+      "contentName": "source.css",
+      "patterns": [
+        {
+          "include": "source.css"
+        }
+      ]
+    },
+    "script-block": {
+      "begin": "(<)(script)(\\b[^>]*>)",
+      "end": "(</)(script)(>)",
+      "beginCaptures": {
+        "1": {
+          "name": "punctuation.definition.tag.begin.gitml"
+        },
+        "2": {
+          "name": "entity.name.tag.gitml"
+        },
+        "3": {
+          "name": "punctuation.definition.tag.end.gitml"
+        }
+      },
+      "endCaptures": {
+        "1": {
+          "name": "punctuation.definition.tag.begin.gitml"
+        },
+        "2": {
+          "name": "entity.name.tag.gitml"
+        },
+        "3": {
+          "name": "punctuation.definition.tag.end.gitml"
+        }
+      },
+      "contentName": "source.js",
+      "patterns": [
+        {
+          "include": "source.js"
+        }
+      ]
+    },
+    "interpolation": {
+      "name": "variable.other.gitml",
+      "match": "\\{\\{\\s*[\\w.-]*\\s*\\}\\}"
+    },
+    "binding": {
+      "name": "variable.other.readwrite.gitml",
+      "match": "\\{\\$[\\w.-]+\\}"
+    },
+    "inline-markdown": {
+      "patterns": [
+        {
+          "name": "markup.bold.gitml",
+          "match": "\\*\\*[^*\\n]+\\*\\*"
+        },
+        {
+          "name": "markup.italic.gitml",
+          "match": "(?<![*\\w])\\*[^*\\s][^*\\n]*\\*(?![*\\w])"
+        },
+        {
+          "name": "markup.inline.raw.gitml",
+          "match": "`[^`\\n]+`"
+        }
+      ]
+    },
+    "gitml-tag": {
+      "begin": "(</?)((?i:theme-toggle|announcement|theme-switch|slider-input|testimonial|breadcrumb|blockquote|newsletter|pagination|figcaption|container|countdown|accordion|backtotop|blog-card|sparkline|component|gradient|progress|carousel|textarea|timeline|notfound|dropdown|skeleton|checkbox|fieldset|colgroup|section|divider|actions|feature|pricing|avatars|callout|tooltip|marquee|browser|include|trigger|heading|sidebar|content|stepper|spinner|loading|gallery|product|dataset|contact|article|address|details|summary|caption|picture|spacer|navbar|footer|button|avatar|member|rating|banner|slider|select|submit|import|center|cookie|status|drawer|iframe|figure|social|metric|switch|toggle|search|upload|strong|header|legend|source|hgroup|output|script|define|gitml|title|stack|split|bento|quote|table|badge|alert|modal|logos|image|video|input|field|route|param|state|small|typed|toast|empty|audio|embed|chart|radio|range|login|aside|label|thead|tbody|tfoot|style|page|html|body|base|head|meta|grid|link|hero|grad|text|mark|list|item|code|card|stat|plan|team|chip|tabs|icon|form|step|bind|show|each|lead|docs|menu|copy|post|file|span|main|time|abbr|cite|404|row|col|nav|kbd|btn|tag|faq|tab|img|map|cta|toc|kpi|div|sub|sup|pre|del|ins|wbr|raw|hr|h1|h2|h3|h4|ul|ol|li|tr|td|th|if|em|dl|dt|dd|h5|h6|br|p|a|b|i|u|s|q))(?=[\\s/>])",
+      "beginCaptures": {
+        "1": {
+          "name": "punctuation.definition.tag.begin.gitml"
+        },
+        "2": {
+          "name": "entity.name.tag.gitml"
+        }
+      },
+      "end": "(/?>)",
+      "endCaptures": {
+        "1": {
+          "name": "punctuation.definition.tag.end.gitml"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#attribute"
+        }
+      ]
+    },
+    "other-tag": {
+      "begin": "(</?)([A-Za-z][\\w-]*)",
+      "beginCaptures": {
+        "1": {
+          "name": "punctuation.definition.tag.begin.gitml"
+        },
+        "2": {
+          "name": "entity.name.tag.custom.gitml invalid.deprecated.unknown-tag.gitml"
+        }
+      },
+      "end": "(/?>)",
+      "endCaptures": {
+        "1": {
+          "name": "punctuation.definition.tag.end.gitml"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#attribute"
+        }
+      ]
+    },
+    "attribute": {
+      "patterns": [
+        {
+          "match": "\\b(?:id|class|style|animate|align|bg|color|pad|gap|width|mt|mb|radius|hide|shadow|title|theme|accent|font|lang|href|description|icon|subtitle|eyebrow|cols|justify|wrap|span|reverse|size|text|brand|logo|sticky|items|cta|cta2|href2|image|variant|muted|author|action|target|num|label|prefix|suffix|tier|price|period|featured|name|role|avatar|rating|src|value|to|type|q|open|trigger|alt|rounded|url|method|placeholder|required|options|button|date|path|persist|when|do|as|is|not|words|pages|current|steps|message|lines|side|height|caption|github|twitter|linkedin|instagram|youtube|facebook|mail|site|old|badge|tag|delta|values|data|labels|checked|bind|min|max|step|hint|accept|multiple|charset|rel|content|property|container|motion|og-image|canonical|theme-color)\\b(?=\\s*=)",
+          "name": "entity.other.attribute-name.known.gitml"
+        },
+        {
+          "match": "\\b(?:on:|[A-Za-z_][\\w:-]*)(?=\\s*=)",
+          "name": "entity.other.attribute-name.gitml"
+        },
+        {
+          "include": "#interpolation"
+        },
+        {
+          "name": "string.quoted.double.gitml",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "include": "#interpolation"
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.single.gitml",
+          "begin": "'",
+          "end": "'",
+          "patterns": [
+            {
+              "include": "#interpolation"
+            }
+          ]
+        },
+        {
+          "match": "\\b([A-Za-z_][\\w-]*)\\b",
+          "name": "entity.other.attribute-name.boolean.gitml"
+        }
+      ]
+    }
+  }
+}

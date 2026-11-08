@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GITML Playground</title>
+<style>
+  :root{color-scheme:dark}*{box-sizing:border-box}
+  body{margin:0;height:100vh;display:grid;grid-template-rows:auto 1fr;background:#07080d;color:#e8eaf2;font:14px system-ui,sans-serif}
+  header{display:flex;gap:10px;align-items:center;padding:10px 14px;border-bottom:1px solid #1f2330;background:#0b0d15}
+  header b{font-size:15px;letter-spacing:-.02em;margin-right:8px}header span{color:#7c5cff}
+  select,button{font:inherit;color:inherit;background:#141726;border:1px solid #262b3d;border-radius:8px;padding:6px 12px;cursor:pointer}
+  button:hover,select:hover{border-color:#7c5cff}#st{margin-left:auto;color:#9aa3b5;font-size:13px}#st.e{color:#ff8a8a}
+  main{display:grid;grid-template-columns:1fr 1fr;min-height:0}
+  textarea{background:#0b0d15;color:#e5e7eb;border:0;border-right:1px solid #1f2330;padding:16px;font:13.5px/1.6 ui-monospace,Consolas,monospace;resize:none;outline:none;tab-size:2}
+  iframe{border:0;width:100%;height:100%;background:#fff}
+  @media(max-width:800px){main{grid-template-columns:1fr;grid-template-rows:1fr 1fr}}
+</style>
+<script src="../gitml.js"></script>
+</head>
+<body>
+<header><b>GITML <span>Playground</span></b>
+  <select id="ex"></select><button id="fmt">Formatar</button><button id="cp">Copiar HTML</button><button id="dl">Baixar .html</button><span id="st"></span></header>
+<main><textarea id="src" spellcheck="false"></textarea><iframe id="out" title="Resultado"></iframe></main>
+<script>
+const EX={
+"Página simples":`<gitml theme="dark" accent="violet" font="space-grotesk" title="Olá GITML">
+  <nav brand="GITML" sticky>
+    <link href="#recursos">Recursos</link>
+    <theme-toggle />
+  </nav>
+  <hero eyebrow="Novo" title="Monte páginas com **GITML**" subtitle="Tags simples, visual moderno, zero CSS." cta="Começar" href="#recursos"></hero>
+  <section id="recursos" eyebrow="Recursos" title="Tudo pronto">
+    <grid cols="3" gap="24">
+      <feature icon="zap" title="Rápido">Sem build.</feature>
+      <feature icon="layers" title="Completo">Mais de 150 tags.</feature>
+      <feature icon="rocket" title="Moderno">Rotas e estado.</feature>
+    </grid>
+  </section>
+</gitml>`,
+"App com rotas e estado":`<gitml theme="dark" accent="violet" title="Meu app">
+  <nav brand="Meu app" sticky>
+    <link href="/">Início</link>
+    <link href="/contador">Contador</link>
+    <link href="/painel">Painel</link>
+    <theme-toggle />
+  </nav>
+  <route path="/" title="Início">
+    <hero title="Um app em **uma linguagem**" subtitle="Rotas, estado e gráficos sem JavaScript." cta="Ver contador" href="/contador"></hero>
+  </route>
+  <route path="/contador" title="Contador">
+    <section title="Estado reativo">
+      <state name="n" value="0" />
+      <center>
+        <p size="lg">Valor: <strong>{$n}</strong></p>
+        <actions><button action="dec:n" variant="outline">−1</button><button action="inc:n">+1</button></actions>
+        <show when="n >= 3"><alert type="success" title="Três ou mais!">Apareci sozinho.</alert></show>
+      </center>
+    </section>
+  </route>
+  <route path="/painel" title="Painel">
+    <section title="Painel">
+      <grid cols="3" gap="20">
+        <metric label="Receita" value="R$ 48 mil" delta="+12%" icon="dollar" />
+        <metric label="Usuários" value="3.840" delta="+8%" icon="users" />
+        <metric label="Conversão" value="4,2%" delta="-0,4%" icon="target" />
+      </grid>
+      <spacer size="20" />
+      <chart type="bar" title="Vendas" data="Jan:12,Fev:19,Mar:15,Abr:28,Mai:24" />
+    </section>
+  </route>
+  <notfound><section title="404"><p>Página não encontrada.</p></section></notfound>
+</gitml>`,
+"HTML puro dentro do GITML":`<gitml theme="light" accent="blue" title="HTML + GITML">
+  <main>
+    <section title="Misture à vontade">
+      <div class="x" style="padding:20px;border:1px dashed #999;border-radius:12px">
+        <h3>Tags HTML funcionam</h3>
+        <p>Use <b>div</b>, <span>span</span>, <a href="#">a</a>, <details><summary>details</summary>e mais.</details></p>
+        <button href="#" variant="gradient">Botão GITML</button>
+      </div>
+    </section>
+  </main>
+</gitml>`};
+const $=id=>document.getElementById(id),src=$('src'),out=$('out'),st=$('st'),ex=$('ex');
+Object.keys(EX).forEach(k=>ex.add(new Option(k,k)));
+let last='';
+function run(){const r=GITML.compile(src.value,{allowScripts:true});last=r.html;out.srcdoc=r.html;
+  const n=r.errors.length,w=r.warnings.length;st.className=n?'e':'';st.textContent=n||w?`${n} erro(s), ${w} aviso(s) — ${(r.errors[0]||r.warnings[0]).message}`:'✔ sem problemas';
+  try{location.hash=encodeURIComponent(btoa(unescape(encodeURIComponent(src.value))))}catch(e){}}
+ex.onchange=()=>{src.value=EX[ex.value];run()};
+src.oninput=()=>{clearTimeout(src.t);src.t=setTimeout(run,200)};
+src.onkeydown=e=>{if(e.key==='Tab'){e.preventDefault();document.execCommand('insertText',false,'  ')}};
+$('fmt').onclick=()=>{src.value=GITML.format(src.value);run()};
+$('cp').onclick=async()=>{await navigator.clipboard.writeText(last);st.textContent='HTML copiado!'};
+$('dl').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([last],{type:'text/html'}));a.download='pagina.html';a.click()};
+try{src.value=decodeURIComponent(escape(atob(decodeURIComponent(location.hash.slice(1)))))}catch(e){}
+if(!src.value)src.value=EX[ex.value=ex.options[0].value];run();
+</script>
+</body></html>

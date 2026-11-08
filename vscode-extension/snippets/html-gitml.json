@@ -1,0 +1,65 @@
+{
+  "GITML em arquivo (index.html)": {
+    "prefix": [
+      "gitml-html",
+      "gitml-arquivo"
+    ],
+    "description": "Página HTML que carrega um arquivo .gitml (abra por servidor: GITML: Abrir no navegador)",
+    "body": [
+      "<!DOCTYPE html>",
+      "<html lang=\"pt-BR\">",
+      "<head>",
+      "  <meta charset=\"utf-8\">",
+      "  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
+      "  <title>${1:Meu site}</title>",
+      "  <style>html{background:#07080d}</style>",
+      "  <script src=\"${2:gitml.js}\" charset=\"utf-8\" data-src=\"${3:index.gitml}\" onerror=\"var l=document.getElementById('gitml-loading');if(l)l.innerHTML='Não encontrei o <b>gitml.js</b> nesta pasta.'\"></script>",
+      "</head>",
+      "<body>",
+      "  <p id=\"gitml-loading\" style=\"font:16px/1.6 system-ui,sans-serif;color:#e8eaf2;background:#10121a;border:1px solid #262b3d;border-radius:14px;max-width:640px;margin:48px auto;padding:20px 24px\">Carregando GITML… se não sumir, abra o Console (F12).</p>",
+      "</body>",
+      "</html>"
+    ]
+  },
+  "GITML dentro do HTML (inline)": {
+    "prefix": [
+      "gitml-inline",
+      "gitml-pagina"
+    ],
+    "description": "Página HTML com o GITML escrito dentro de <script type=\"text/gitml\">",
+    "body": [
+      "<!DOCTYPE html>",
+      "<html lang=\"pt-BR\">",
+      "<head>",
+      "  <meta charset=\"utf-8\">",
+      "  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
+      "  <title>${1:Meu site}</title>",
+      "  <style>html{background:#07080d}</style>",
+      "  <script src=\"${2:gitml.js}\" charset=\"utf-8\" onerror=\"var l=document.getElementById('gitml-loading');if(l)l.innerHTML='Não encontrei o <b>gitml.js</b> nesta pasta.'\"></script>",
+      "</head>",
+      "<body>",
+      "  <p id=\"gitml-loading\" style=\"font:16px/1.6 system-ui,sans-serif;color:#e8eaf2;background:#10121a;border:1px solid #262b3d;border-radius:14px;max-width:640px;margin:48px auto;padding:20px 24px\">Carregando GITML… se não sumir, abra o Console (F12).</p>",
+      "<script type=\"text/gitml\">",
+      "<gitml theme=\"${3|dark,light,auto|}\" accent=\"violet\" title=\"${1:Meu site}\">",
+      "  $0",
+      "</gitml>",
+      "</script>",
+      "</body>",
+      "</html>"
+    ]
+  },
+  "Bloco GITML": {
+    "prefix": [
+      "gitml-bloco",
+      "text/gitml"
+    ],
+    "description": "Bloco <script type=\"text/gitml\">",
+    "body": [
+      "<script type=\"text/gitml\">",
+      "<gitml theme=\"dark\" accent=\"violet\">",
+      "  $0",
+      "</gitml>",
+      "</script>"
+    ]
+  }
+}

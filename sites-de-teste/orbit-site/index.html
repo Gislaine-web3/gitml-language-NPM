@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Orbit</title>
+  <style>html{background:#07080d}</style>
+  <!-- Modo "dentro do HTML": o motor lê o index.gitml e monta a página.
+       Funciona em qualquer servidor estático (npx serve, python -m http.server...). -->
+  <script src="./gitml.js" charset="utf-8" data-src="index.gitml" onerror="var l=document.getElementById('gitml-loading');if(l)l.innerHTML='<b>gitml.js</b> não foi encontrado ao lado deste arquivo. Abra o site com <code>gitml start</code> ou copie o gitml.js para esta pasta.'"></script>
+</head>
+<body>
+  <p id="gitml-loading" style="font:16px/1.6 system-ui,sans-serif;color:#e8eaf2;background:#10121a;border:1px solid #262b3d;border-radius:14px;max-width:640px;margin:48px auto;padding:20px 24px">Carregando GITML… se esta mensagem não sumir, o <b>gitml.js</b> não foi carregado (abra o Console com F12).</p>
+</body>
+</html>

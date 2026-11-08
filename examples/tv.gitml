@@ -1,0 +1,100 @@
+<gitml theme="light" accent="violet" font="sora" title="Nebula - sua ideia no ar em minutos" description="Landing page de exemplo feita com GITML">
+
+  <banner href="#precos">Novo: plano Pro com 30% de desconto no primeiro mes - aproveite</banner>
+
+  <nav brand="Nebula" sticky>
+    <link href="#recursos">Recursos</link>
+    <link href="#numeros">Numeros</link>
+    <link href="#precos">Precos</link>
+    <link href="#faq">FAQ</link>
+    <theme-toggle />
+    <button href="#precos" variant="primary">Comecar</button>
+  </nav>
+
+  <hero variant="center"
+        eyebrow="PLATAFORMA SEM CODIGO"
+        title="Sua ideia no ar em minutos"
+        subtitle="Monte paginas modernas com blocos prontos. Sem build, sem complicacao, direto no navegador."
+        cta="Comecar gratis" href="#precos"
+        cta2="Ver recursos" href2="#recursos">
+  </hero>
+
+  <section>
+    <marquee>
+      <logos>Acme</logos>
+      <logos>Globex</logos>
+      <logos>Umbrella</logos>
+      <logos>Initech</logos>
+      <logos>Soylent</logos>
+    </marquee>
+  </section>
+
+  <section id="recursos" eyebrow="RECURSOS" title="Tudo que voce precisa" subtitle="Blocos prontos para montar qualquer pagina em minutos.">
+    <grid cols="3">
+      <feature icon="zap" title="Rapido">Da ideia ao site publicado em poucos minutos.</feature>
+      <feature icon="layers" title="Flexivel">Dezenas de blocos que se combinam do seu jeito.</feature>
+      <feature icon="shield" title="Seguro">Textos e links protegidos contra XSS por padrao.</feature>
+      <feature icon="rocket" title="Leve">Um unico arquivo, sem dependencias nem build.</feature>
+      <feature icon="sparkles" title="Moderno">Animacoes e tema claro/escuro ja inclusos.</feature>
+      <feature icon="globe" title="Responsivo">Fica perfeito no celular, tablet e desktop.</feature>
+    </grid>
+  </section>
+
+  <section id="numeros" bg="soft">
+    <grid cols="3">
+      <stat num="12000" suffix="+" label="Paginas criadas"></stat>
+      <stat num="98" suffix="%" label="Clientes satisfeitos"></stat>
+      <stat num="4" suffix=" min" label="Tempo medio ate publicar"></stat>
+    </grid>
+  </section>
+
+  <section eyebrow="DEPOIMENTOS" title="Quem usa, recomenda">
+    <grid cols="2">
+      <testimonial name="Ana Souza" role="Designer" rating="5">Montei minha landing numa tarde so. Ficou profissional sem eu escrever CSS.</testimonial>
+      <testimonial name="Carlos Lima" role="Desenvolvedor" rating="5">Finalmente uma ferramenta que nao me atrapalha. Abriu no navegador e funcionou.</testimonial>
+    </grid>
+  </section>
+
+  <section id="precos" eyebrow="PLANOS" title="Escolha seu plano" subtitle="Comece de graca e evolua quando precisar.">
+    <grid cols="3">
+      <pricing tier="Free" price="R$0" period="/mes" cta="Comecar">
+        <li>1 projeto</li>
+        <li>Subdominio gratis</li>
+        <li>Blocos essenciais</li>
+      </pricing>
+      <pricing tier="Pro" price="R$29" period="/mes" featured cta="Assinar Pro">
+        <li>Projetos ilimitados</li>
+        <li>Dominio proprio</li>
+        <li>Todos os blocos</li>
+      </pricing>
+      <pricing tier="Team" price="R$89" period="/mes" cta="Falar com vendas">
+        <li>Tudo do plano Pro</li>
+        <li>Ate 5 membros</li>
+        <li>Suporte prioritario</li>
+      </pricing>
+    </grid>
+  </section>
+
+  <section eyebrow="COMO FUNCIONA" title="Do rascunho ao ar em 3 passos">
+    <timeline>
+      <step title="Escreva" date="Passo 1">Monte sua pagina com tags simples num arquivo .gitml.</step>
+      <step title="Visualize" date="Passo 2">Abra o preview e veja tudo renderizado na hora.</step>
+      <step title="Publique" date="Passo 3">Exporte um .html pronto e coloque no ar.</step>
+    </timeline>
+  </section>
+
+  <section id="faq" eyebrow="DUVIDAS" title="Perguntas frequentes">
+    <accordion title="Preciso saber programar?">Nao. Voce monta tudo com blocos prontos, sem escrever HTML nem CSS.</accordion>
+    <accordion title="Posso usar meu proprio dominio?">Sim, nos planos Pro e Team voce conecta seu dominio.</accordion>
+    <accordion title="Existe plano gratuito?">Sim, o plano Free e gratis para sempre, com 1 projeto.</accordion>
+  </section>
+
+  <section>
+    <newsletter placeholder="seu@email.com" button="Quero novidades"></newsletter>
+  </section>
+
+  <cta title="Pronto para comecar?" button="Criar minha pagina" href="#precos"></cta>
+
+  <footer brand="Nebula">Feito com GITML - exemplo de demonstracao</footer>
+
+</gitml>

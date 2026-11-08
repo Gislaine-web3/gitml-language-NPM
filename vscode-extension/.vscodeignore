@@ -1,0 +1,4 @@
+projeto.html
+*.vsix
+.vscode/**
+**/*.map

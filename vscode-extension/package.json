@@ -1,0 +1,215 @@
+{
+  "name": "gitml",
+  "displayName": "GITML — Modern Markup",
+  "description": "Linguagem GITML: comando `gitml` no terminal, abre o site no navegador (localhost), prévia ao vivo, realce (também dentro de HTML), autocompletar, diagnósticos, formatação e ícone de arquivo .gitml.",
+  "version": "0.4.2",
+  "publisher": "gislaine-web3",
+  "license": "MIT",
+  "icon": "icons/icon.png",
+  "galleryBanner": {
+    "color": "#0b0b14",
+    "theme": "dark"
+  },
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets",
+    "Formatters",
+    "Other"
+  ],
+  "keywords": [
+    "gitml",
+    "markup",
+    "web",
+    "preview",
+    "components",
+    "html",
+    "react",
+    "next"
+  ],
+  "main": "./extension.js",
+  "activationEvents": [
+    "onStartupFinished",
+    "onLanguage:gitml",
+    "onLanguage:html",
+    "onCommand:gitml.openBrowser"
+  ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": "limited",
+      "description": "Em pastas não confiáveis a prévia não executa <script> do arquivo."
+    }
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "gitml",
+        "aliases": [
+          "GITML",
+          "gitml"
+        ],
+        "extensions": [
+          ".gitml"
+        ],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./icons/gitml-file.png",
+          "dark": "./icons/gitml-file.png"
+        }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "gitml",
+        "scopeName": "text.html.gitml",
+        "path": "./syntaxes/gitml.tmLanguage.json",
+        "embeddedLanguages": {
+          "source.css": "css",
+          "source.js": "javascript"
+        }
+      },
+      {
+        "scopeName": "gitml.injection",
+        "path": "./syntaxes/gitml-in-html.injection.json",
+        "injectTo": [
+          "text.html.basic"
+        ],
+        "embeddedLanguages": {
+          "meta.embedded.block.gitml": "gitml",
+          "source.css": "css",
+          "source.js": "javascript"
+        }
+      }
+    ],
+    "snippets": [
+      {
+        "language": "gitml",
+        "path": "./snippets/gitml.json"
+      },
+      {
+        "language": "html",
+        "path": "./snippets/html-gitml.json"
+      }
+    ],
+    "iconThemes": [
+      {
+        "id": "gitml-file-icons",
+        "label": "GITML File Icons",
+        "path": "./icons/file-icon-theme.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "gitml.openBrowser",
+        "title": "GITML: Abrir no navegador (localhost)",
+        "icon": "$(globe)"
+      },
+      {
+        "command": "gitml.startTerminal",
+        "title": "GITML: Iniciar servidor no terminal"
+      },
+      {
+        "command": "gitml.preview",
+        "title": "GITML: Abrir prévia ao vivo",
+        "icon": "$(open-preview)"
+      },
+      {
+        "command": "gitml.build",
+        "title": "GITML: Gerar HTML",
+        "icon": "$(file-code)"
+      },
+      {
+        "command": "gitml.components",
+        "title": "GITML: Explorar e inserir componentes"
+      },
+      {
+        "command": "gitml.stopServer",
+        "title": "GITML: Parar servidor local"
+      },
+      {
+        "command": "gitml.serverMenu",
+        "title": "GITML: Servidores ativos"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "gitml.preview",
+        "key": "ctrl+alt+g",
+        "mac": "cmd+alt+g",
+        "when": "editorLangId == gitml"
+      },
+      {
+        "command": "gitml.openBrowser",
+        "key": "ctrl+alt+b",
+        "mac": "cmd+alt+b",
+        "when": "editorLangId == gitml"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "gitml.openBrowser",
+          "when": "resourceLangId == gitml",
+          "group": "navigation@1"
+        },
+        {
+          "command": "gitml.preview",
+          "when": "resourceLangId == gitml",
+          "group": "navigation@2"
+        },
+        {
+          "command": "gitml.build",
+          "when": "resourceLangId == gitml",
+          "group": "navigation@3"
+        },
+        {
+          "command": "gitml.openBrowser",
+          "when": "resourceLangId == html",
+          "group": "navigation@1"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "gitml.openBrowser",
+          "when": "resourceLangId == gitml || resourceLangId == html",
+          "group": "navigation"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "GITML",
+      "properties": {
+        "gitml.diagnostics.enable": {
+          "type": "boolean",
+          "default": true,
+          "description": "Mostrar erros e avisos do GITML no editor."
+        },
+        "gitml.autoCloseTags": {
+          "type": "boolean",
+          "default": true,
+          "description": "Fecha a tag automaticamente ao digitar '>' (em .gitml e dentro de <script type=\"text/gitml\">)."
+        },
+        "gitml.preview.allowScripts": {
+          "type": "boolean",
+          "default": true,
+          "description": "Permite que <script> do arquivo rode na prévia (somente em pastas confiáveis)."
+        },
+        "gitml.server.port": {
+          "type": "number",
+          "default": 4173,
+          "description": "Porta inicial do servidor local (se estiver ocupada, usa a próxima livre)."
+        }
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Gislaine-web3/gitml-extension-src"
+  },
+  "bugs": {
+    "url": "https://github.com/Gislaine-web3/gitml-extension-src/issues"
+  },
+  "homepage": "https://github.com/Gislaine-web3/gitml-extension-src#readme"
+}

@@ -1,0 +1,11 @@
+<section eyebrow="Loja" title="Produtos">
+  <search placeholder="Buscar produto…" target=".g-product"></search>
+  <spacer size="24" />
+  <grid cols="3" gap="24">
+    <each items="Teclado,Mouse,Monitor,Headset,Webcam,Cadeira" as="p">
+      <product name="{{p}}" price="R$ {{index}}99" old="R$ {{index}}49" badge="-10%" rating="5" href="#">Item {{index}} da loja.</product>
+    </each>
+  </grid>
+  <spacer size="32" />
+  <pagination pages="9" current="2" href="/produtos?p=" />
+</section>

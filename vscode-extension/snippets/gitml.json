@@ -1,0 +1,1694 @@
+{
+  "gitml": {
+    "prefix": [
+      "gitml",
+      "page",
+      "html"
+    ],
+    "description": "Raiz do documento (<gitml> ou <html>): theme, accent, font, lang, title",
+    "body": [
+      "<gitml theme=\"${1}\" accent=\"${2}\" font=\"${3}\">${0}</gitml>"
+    ]
+  },
+  "body": {
+    "prefix": [
+      "body"
+    ],
+    "description": "Corpo do documento: class, style, id (aplicados ao <body> real)",
+    "body": [
+      "<body>${0}</body>"
+    ]
+  },
+  "title": {
+    "prefix": [
+      "title"
+    ],
+    "description": "Título da aba (use dentro de <head>)",
+    "body": [
+      "<title>${0}</title>"
+    ]
+  },
+  "base": {
+    "prefix": [
+      "base"
+    ],
+    "description": "Endereço base dos links (dentro de <head>): href",
+    "body": [
+      "<base href=\"${1}\">${0}</base>"
+    ]
+  },
+  "head": {
+    "prefix": [
+      "head",
+      "meta"
+    ],
+    "description": "Metadados da página (title, description, icon)",
+    "body": [
+      "<head title=\"${1}\" description=\"${2}\" icon=\"${3}\">${0}</head>"
+    ]
+  },
+  "section": {
+    "prefix": [
+      "section"
+    ],
+    "description": "Seção com título opcional",
+    "body": [
+      "<section title=\"${1}\" subtitle=\"${2}\" eyebrow=\"${3}\">${0}</section>"
+    ]
+  },
+  "container": {
+    "prefix": [
+      "container"
+    ],
+    "description": "Centraliza o conteúdo",
+    "body": [
+      "<container width=\"${1}\">${0}</container>"
+    ]
+  },
+  "grid": {
+    "prefix": [
+      "grid"
+    ],
+    "description": "Grade responsiva",
+    "body": [
+      "<grid cols=\"${1}\" gap=\"${2}\">${0}</grid>"
+    ]
+  },
+  "row": {
+    "prefix": [
+      "row",
+      "stack"
+    ],
+    "description": "Linha flexível (row) ou pilha vertical (stack)",
+    "body": [
+      "<row gap=\"${1}\" align=\"${2}\" justify=\"${3}\">${0}</row>"
+    ]
+  },
+  "col": {
+    "prefix": [
+      "col"
+    ],
+    "description": "Coluna dentro de row (span)",
+    "body": [
+      "<col span=\"${1}\">${0}</col>"
+    ]
+  },
+  "split": {
+    "prefix": [
+      "split"
+    ],
+    "description": "Duas colunas: texto + mídia",
+    "body": [
+      "<split reverse=\"${1}\">${0}</split>"
+    ]
+  },
+  "bento": {
+    "prefix": [
+      "bento"
+    ],
+    "description": "Grade estilo bento (Apple)",
+    "body": [
+      "<bento>${0}</bento>"
+    ]
+  },
+  "spacer": {
+    "prefix": [
+      "spacer"
+    ],
+    "description": "Espaço vertical",
+    "body": [
+      "<spacer size=\"${1}\" />"
+    ]
+  },
+  "divider": {
+    "prefix": [
+      "divider",
+      "hr"
+    ],
+    "description": "Linha divisória com texto opcional",
+    "body": [
+      "<divider text=\"${1}\" />"
+    ]
+  },
+  "nav": {
+    "prefix": [
+      "nav",
+      "navbar"
+    ],
+    "description": "Barra de navegação fixa com menu mobile",
+    "body": [
+      "<nav brand=\"${1}\" logo=\"${2}\" sticky=\"${3}\">${0}</nav>"
+    ]
+  },
+  "link": {
+    "prefix": [
+      "link"
+    ],
+    "description": "Link de texto",
+    "body": [
+      "<link href=\"${1}\">${0}</link>"
+    ]
+  },
+  "breadcrumb": {
+    "prefix": [
+      "breadcrumb"
+    ],
+    "description": "Trilha: items=\"Início/Docs/API\"",
+    "body": [
+      "<breadcrumb items=\"${1}\">${0}</breadcrumb>"
+    ]
+  },
+  "footer": {
+    "prefix": [
+      "footer"
+    ],
+    "description": "Rodapé",
+    "body": [
+      "<footer brand=\"${1}\">${0}</footer>"
+    ]
+  },
+  "theme-toggle": {
+    "prefix": [
+      "theme-toggle",
+      "theme-switch"
+    ],
+    "description": "Botão claro/escuro (lembra a escolha)",
+    "body": [
+      "<theme-toggle />"
+    ]
+  },
+  "hero": {
+    "prefix": [
+      "hero"
+    ],
+    "description": "Cabeçalho principal impactante",
+    "body": [
+      "<hero title=\"${1}\" subtitle=\"${2}\" eyebrow=\"${3}\">${0}</hero>"
+    ]
+  },
+  "grad": {
+    "prefix": [
+      "grad",
+      "gradient"
+    ],
+    "description": "Texto com degradê",
+    "body": [
+      "<grad>${0}</grad>"
+    ]
+  },
+  "h1": {
+    "prefix": [
+      "h1",
+      "h2",
+      "h3",
+      "h4"
+    ],
+    "description": "Títulos",
+    "body": [
+      "<h1 align=\"${1}\">${0}</h1>"
+    ]
+  },
+  "p": {
+    "prefix": [
+      "p",
+      "text"
+    ],
+    "description": "Parágrafo (aceita **negrito**, *itálico*, `código`, [link](url))",
+    "body": [
+      "<p size=\"${1}\" muted=\"${2}\">${0}</p>"
+    ]
+  },
+  "quote": {
+    "prefix": [
+      "quote",
+      "blockquote"
+    ],
+    "description": "Citação",
+    "body": [
+      "<quote author=\"${1}\">${0}</quote>"
+    ]
+  },
+  "kbd": {
+    "prefix": [
+      "kbd"
+    ],
+    "description": "Tecla de atalho",
+    "body": [
+      "<kbd>${0}</kbd>"
+    ]
+  },
+  "mark": {
+    "prefix": [
+      "mark"
+    ],
+    "description": "Texto marcado",
+    "body": [
+      "<mark>${0}</mark>"
+    ]
+  },
+  "ul": {
+    "prefix": [
+      "ul",
+      "list"
+    ],
+    "description": "Lista com ícones (icon=check)",
+    "body": [
+      "<ul icon=\"${1}\">${0}</ul>"
+    ]
+  },
+  "ol": {
+    "prefix": [
+      "ol"
+    ],
+    "description": "Lista numerada",
+    "body": [
+      "<ol>${0}</ol>"
+    ]
+  },
+  "li": {
+    "prefix": [
+      "li",
+      "item"
+    ],
+    "description": "Item de lista",
+    "body": [
+      "<li>${0}</li>"
+    ]
+  },
+  "code": {
+    "prefix": [
+      "code"
+    ],
+    "description": "Bloco de código com botão copiar",
+    "body": [
+      "<code lang=\"${1}\" title=\"${2}\">${0}</code>"
+    ]
+  },
+  "button": {
+    "prefix": [
+      "button",
+      "btn"
+    ],
+    "description": "Botão: variant=primary|outline|ghost|soft size=sm|lg icon",
+    "body": [
+      "<button href=\"${1}\" variant=\"${2}\" size=\"${3}\">${0}</button>"
+    ]
+  },
+  "actions": {
+    "prefix": [
+      "actions"
+    ],
+    "description": "Agrupa botões",
+    "body": [
+      "<actions align=\"${1}\">${0}</actions>"
+    ]
+  },
+  "card": {
+    "prefix": [
+      "card"
+    ],
+    "description": "Cartão: title, icon, image, href, variant=glass|soft|outline",
+    "body": [
+      "<card title=\"${1}\" icon=\"${2}\" image=\"${3}\">${0}</card>"
+    ]
+  },
+  "feature": {
+    "prefix": [
+      "feature"
+    ],
+    "description": "Recurso com ícone",
+    "body": [
+      "<feature icon=\"${1}\" title=\"${2}\">${0}</feature>"
+    ]
+  },
+  "stat": {
+    "prefix": [
+      "stat"
+    ],
+    "description": "Número de destaque que conta ao aparecer: num, label, prefix, suffix",
+    "body": [
+      "<stat num=\"${1}\" label=\"${2}\" prefix=\"${3}\">${0}</stat>"
+    ]
+  },
+  "pricing": {
+    "prefix": [
+      "pricing",
+      "plan"
+    ],
+    "description": "Plano de preço",
+    "body": [
+      "<pricing tier=\"${1}\" price=\"${2}\" period=\"${3}\">${0}</pricing>"
+    ]
+  },
+  "testimonial": {
+    "prefix": [
+      "testimonial"
+    ],
+    "description": "Depoimento com avatar",
+    "body": [
+      "<testimonial name=\"${1}\" role=\"${2}\" avatar=\"${3}\">${0}</testimonial>"
+    ]
+  },
+  "avatar": {
+    "prefix": [
+      "avatar"
+    ],
+    "description": "Avatar com iniciais ou imagem",
+    "body": [
+      "<avatar name=\"${1}\" src=\"${2}\" size=\"${3}\" />"
+    ]
+  },
+  "avatars": {
+    "prefix": [
+      "avatars"
+    ],
+    "description": "Grupo de avatares sobrepostos",
+    "body": [
+      "<avatars>${0}</avatars>"
+    ]
+  },
+  "team": {
+    "prefix": [
+      "team",
+      "member"
+    ],
+    "description": "Membro da equipe",
+    "body": [
+      "<team name=\"${1}\" role=\"${2}\" src=\"${3}\">${0}</team>"
+    ]
+  },
+  "table": {
+    "prefix": [
+      "table"
+    ],
+    "description": "Tabela: primeira linha vira cabeçalho",
+    "body": [
+      "<table>${0}</table>"
+    ]
+  },
+  "tr": {
+    "prefix": [
+      "tr"
+    ],
+    "description": "Linha de tabela",
+    "body": [
+      "<tr>${0}</tr>"
+    ]
+  },
+  "td": {
+    "prefix": [
+      "td",
+      "th"
+    ],
+    "description": "Célula",
+    "body": [
+      "<td>${0}</td>"
+    ]
+  },
+  "progress": {
+    "prefix": [
+      "progress"
+    ],
+    "description": "Barra de progresso",
+    "body": [
+      "<progress value=\"${1}\" label=\"${2}\" />"
+    ]
+  },
+  "rating": {
+    "prefix": [
+      "rating"
+    ],
+    "description": "Estrelas de avaliação",
+    "body": [
+      "<rating value=\"${1}\" />"
+    ]
+  },
+  "countdown": {
+    "prefix": [
+      "countdown"
+    ],
+    "description": "Contagem regressiva até to=\"2026-12-31\"",
+    "body": [
+      "<countdown to=\"${1}\" />"
+    ]
+  },
+  "badge": {
+    "prefix": [
+      "badge",
+      "chip",
+      "tag"
+    ],
+    "description": "Etiqueta: variant=primary|success|warning|danger",
+    "body": [
+      "<badge variant=\"${1}\">${0}</badge>"
+    ]
+  },
+  "alert": {
+    "prefix": [
+      "alert",
+      "callout"
+    ],
+    "description": "Aviso: type=info|success|warning|danger",
+    "body": [
+      "<alert type=\"${1}\" title=\"${2}\">${0}</alert>"
+    ]
+  },
+  "tooltip": {
+    "prefix": [
+      "tooltip"
+    ],
+    "description": "Dica ao passar o mouse",
+    "body": [
+      "<tooltip text=\"${1}\">${0}</tooltip>"
+    ]
+  },
+  "banner": {
+    "prefix": [
+      "banner",
+      "announcement"
+    ],
+    "description": "Faixa de anúncio no topo",
+    "body": [
+      "<banner href=\"${1}\">${0}</banner>"
+    ]
+  },
+  "accordion": {
+    "prefix": [
+      "accordion",
+      "faq"
+    ],
+    "description": "Pergunta expansível (title ou q)",
+    "body": [
+      "<accordion title=\"${1}\" q=\"${2}\" open=\"${3}\">${0}</accordion>"
+    ]
+  },
+  "tabs": {
+    "prefix": [
+      "tabs"
+    ],
+    "description": "Abas (contém <tab label>)",
+    "body": [
+      "<tabs>${0}</tabs>"
+    ]
+  },
+  "tab": {
+    "prefix": [
+      "tab"
+    ],
+    "description": "Conteúdo de uma aba",
+    "body": [
+      "<tab label=\"${1}\">${0}</tab>"
+    ]
+  },
+  "modal": {
+    "prefix": [
+      "modal"
+    ],
+    "description": "Janela modal aberta por botão",
+    "body": [
+      "<modal trigger=\"${1}\" title=\"${2}\">${0}</modal>"
+    ]
+  },
+  "carousel": {
+    "prefix": [
+      "carousel",
+      "slider"
+    ],
+    "description": "Carrossel horizontal com rolagem",
+    "body": [
+      "<carousel>${0}</carousel>"
+    ]
+  },
+  "marquee": {
+    "prefix": [
+      "marquee",
+      "logos"
+    ],
+    "description": "Faixa de logos/textos em movimento",
+    "body": [
+      "<marquee>${0}</marquee>"
+    ]
+  },
+  "image": {
+    "prefix": [
+      "image",
+      "img"
+    ],
+    "description": "Imagem arredondada",
+    "body": [
+      "<image src=\"${1}\" alt=\"${2}\" rounded=\"${3}\" />"
+    ]
+  },
+  "video": {
+    "prefix": [
+      "video"
+    ],
+    "description": "Vídeo (arquivo ou YouTube)",
+    "body": [
+      "<video src=\"${1}\" />"
+    ]
+  },
+  "map": {
+    "prefix": [
+      "map"
+    ],
+    "description": "Mapa do Google: q=\"São Paulo\"",
+    "body": [
+      "<map q=\"${1}\" />"
+    ]
+  },
+  "icon": {
+    "prefix": [
+      "icon"
+    ],
+    "description": "Ícone embutido: name=zap|star|check|x|heart|rocket… ou emoji",
+    "body": [
+      "<icon name=\"${1}\" size=\"${2}\" />"
+    ]
+  },
+  "browser": {
+    "prefix": [
+      "browser"
+    ],
+    "description": "Moldura de navegador para screenshots",
+    "body": [
+      "<browser url=\"${1}\">${0}</browser>"
+    ]
+  },
+  "form": {
+    "prefix": [
+      "form"
+    ],
+    "description": "Formulário (action, method)",
+    "body": [
+      "<form action=\"${1}\" method=\"${2}\">${0}</form>"
+    ]
+  },
+  "input": {
+    "prefix": [
+      "input",
+      "field"
+    ],
+    "description": "Campo: label, type, placeholder, name",
+    "body": [
+      "<input label=\"${1}\" type=\"${2}\" placeholder=\"${3}\" />"
+    ]
+  },
+  "textarea": {
+    "prefix": [
+      "textarea"
+    ],
+    "description": "Texto longo",
+    "body": [
+      "<textarea label=\"${1}\" name=\"${2}\" placeholder=\"${3}\">${0}</textarea>"
+    ]
+  },
+  "select": {
+    "prefix": [
+      "select"
+    ],
+    "description": "Lista: options=\"A,B,C\"",
+    "body": [
+      "<select label=\"${1}\" name=\"${2}\" options=\"${3}\">${0}</select>"
+    ]
+  },
+  "submit": {
+    "prefix": [
+      "submit"
+    ],
+    "description": "Botão de enviar",
+    "body": [
+      "<submit>${0}</submit>"
+    ]
+  },
+  "newsletter": {
+    "prefix": [
+      "newsletter"
+    ],
+    "description": "Captura de e-mail em linha",
+    "body": [
+      "<newsletter placeholder=\"${1}\" button=\"${2}\" action=\"${3}\">${0}</newsletter>"
+    ]
+  },
+  "timeline": {
+    "prefix": [
+      "timeline"
+    ],
+    "description": "Linha do tempo vertical",
+    "body": [
+      "<timeline>${0}</timeline>"
+    ]
+  },
+  "step": {
+    "prefix": [
+      "step"
+    ],
+    "description": "Etapa da timeline",
+    "body": [
+      "<step title=\"${1}\" date=\"${2}\">${0}</step>"
+    ]
+  },
+  "cta": {
+    "prefix": [
+      "cta"
+    ],
+    "description": "Chamada final para ação",
+    "body": [
+      "<cta title=\"${1}\" button=\"${2}\" href=\"${3}\">${0}</cta>"
+    ]
+  },
+  "route": {
+    "prefix": [
+      "route"
+    ],
+    "description": "Página do app (SPA): path=\"/sobre\" title=\"Sobre\" ou src=\"pages/sobre.gitml\"",
+    "body": [
+      "<route path=\"${1}\" title=\"${2}\" src=\"${3}\">${0}</route>"
+    ]
+  },
+  "notfound": {
+    "prefix": [
+      "404",
+      "notfound"
+    ],
+    "description": "Página 404 (quando nenhuma rota combina)",
+    "body": [
+      "<notfound title=\"${1}\">${0}</notfound>"
+    ]
+  },
+  "param": {
+    "prefix": [
+      "param"
+    ],
+    "description": "Mostra um parâmetro da rota: <param name=\"id\"> (rota /post/:id)",
+    "body": [
+      "<param name=\"${1}\" />"
+    ]
+  },
+  "include": {
+    "prefix": [
+      "include",
+      "import"
+    ],
+    "description": "Importa outro arquivo .gitml: <include src=\"partes/menu.gitml\">",
+    "body": [
+      "<include src=\"${1}\" />"
+    ]
+  },
+  "state": {
+    "prefix": [
+      "state"
+    ],
+    "description": "Variável reativa: <state name=\"n\" value=\"0\" persist>",
+    "body": [
+      "<state name=\"${1}\" value=\"${2}\" persist=\"${3}\" />"
+    ]
+  },
+  "bind": {
+    "prefix": [
+      "bind"
+    ],
+    "description": "Mostra o valor de um estado (ou use {$nome} em qualquer texto)",
+    "body": [
+      "<bind name=\"${1}\" />"
+    ]
+  },
+  "show": {
+    "prefix": [
+      "show"
+    ],
+    "description": "Mostra o conteúdo se a condição for verdadeira: when=\"aberto\" | \"n > 3\" | \"!ok\"",
+    "body": [
+      "<show when=\"${1}\">${0}</show>"
+    ]
+  },
+  "trigger": {
+    "prefix": [
+      "trigger"
+    ],
+    "description": "Torna qualquer bloco clicável: do=\"toggle:menu\" (inc, dec, set, toggle, reset)",
+    "body": [
+      "<trigger do=\"${1}\">${0}</trigger>"
+    ]
+  },
+  "each": {
+    "prefix": [
+      "each"
+    ],
+    "description": "Repete o conteúdo: <each items=\"A,B,C\" as=\"x\"> usa {{x}} e {{index}}",
+    "body": [
+      "<each items=\"${1}\" as=\"${2}\">${0}</each>"
+    ]
+  },
+  "if": {
+    "prefix": [
+      "if"
+    ],
+    "description": "Condição de compilação: <if value=\"{{x}}\" is=\"pro\">",
+    "body": [
+      "<if value=\"${1}\" is=\"${2}\" not=\"${3}\">${0}</if>"
+    ]
+  },
+  "center": {
+    "prefix": [
+      "center"
+    ],
+    "description": "Centraliza conteúdo na horizontal",
+    "body": [
+      "<center>${0}</center>"
+    ]
+  },
+  "heading": {
+    "prefix": [
+      "heading"
+    ],
+    "description": "Bloco de título: eyebrow, title, subtitle",
+    "body": [
+      "<heading eyebrow=\"${1}\" title=\"${2}\" subtitle=\"${3}\">${0}</heading>"
+    ]
+  },
+  "lead": {
+    "prefix": [
+      "lead"
+    ],
+    "description": "Parágrafo de destaque",
+    "body": [
+      "<lead>${0}</lead>"
+    ]
+  },
+  "small": {
+    "prefix": [
+      "small"
+    ],
+    "description": "Texto pequeno",
+    "body": [
+      "<small>${0}</small>"
+    ]
+  },
+  "typed": {
+    "prefix": [
+      "typed"
+    ],
+    "description": "Texto que digita sozinho: words=\"rápido,bonito,moderno\"",
+    "body": [
+      "<typed words=\"${1}\">${0}</typed>"
+    ]
+  },
+  "sidebar": {
+    "prefix": [
+      "sidebar"
+    ],
+    "description": "Menu lateral (docs)",
+    "body": [
+      "<sidebar title=\"${1}\">${0}</sidebar>"
+    ]
+  },
+  "docs": {
+    "prefix": [
+      "docs"
+    ],
+    "description": "Layout de documentação: <sidebar> + <content>",
+    "body": [
+      "<docs>${0}</docs>"
+    ]
+  },
+  "content": {
+    "prefix": [
+      "content"
+    ],
+    "description": "Área principal ao lado da sidebar",
+    "body": [
+      "<content>${0}</content>"
+    ]
+  },
+  "dropdown": {
+    "prefix": [
+      "dropdown",
+      "menu"
+    ],
+    "description": "Menu suspenso: <dropdown label=\"Produtos\"> links </dropdown>",
+    "body": [
+      "<dropdown label=\"${1}\">${0}</dropdown>"
+    ]
+  },
+  "toc": {
+    "prefix": [
+      "toc"
+    ],
+    "description": "Sumário automático (h2/h3 da página)",
+    "body": [
+      "<toc title=\"${1}\" target=\"${2}\" />"
+    ]
+  },
+  "pagination": {
+    "prefix": [
+      "pagination"
+    ],
+    "description": "Paginação: pages=\"9\" current=\"2\" href=\"?p=\"",
+    "body": [
+      "<pagination pages=\"${1}\" current=\"${2}\" href=\"${3}\" />"
+    ]
+  },
+  "stepper": {
+    "prefix": [
+      "stepper"
+    ],
+    "description": "Etapas: steps=\"Conta,Plano,Pagamento\" current=\"2\"",
+    "body": [
+      "<stepper steps=\"${1}\" current=\"${2}\" />"
+    ]
+  },
+  "backtotop": {
+    "prefix": [
+      "backtotop"
+    ],
+    "description": "Botão flutuante 'voltar ao topo'",
+    "body": [
+      "<backtotop />"
+    ]
+  },
+  "toast": {
+    "prefix": [
+      "toast"
+    ],
+    "description": "Notificação flutuante: <toast trigger=\"Salvar\" type=\"success\">Salvo!</toast>",
+    "body": [
+      "<toast trigger=\"${1}\" type=\"${2}\" message=\"${3}\">${0}</toast>"
+    ]
+  },
+  "skeleton": {
+    "prefix": [
+      "skeleton"
+    ],
+    "description": "Carregando (placeholder): lines, type=avatar|card",
+    "body": [
+      "<skeleton lines=\"${1}\" type=\"${2}\" />"
+    ]
+  },
+  "spinner": {
+    "prefix": [
+      "spinner",
+      "loading"
+    ],
+    "description": "Indicador de carregamento",
+    "body": [
+      "<spinner size=\"${1}\" />"
+    ]
+  },
+  "empty": {
+    "prefix": [
+      "empty"
+    ],
+    "description": "Estado vazio: icon, title",
+    "body": [
+      "<empty icon=\"${1}\" title=\"${2}\">${0}</empty>"
+    ]
+  },
+  "cookie": {
+    "prefix": [
+      "cookie"
+    ],
+    "description": "Aviso de cookies (lembra a escolha)",
+    "body": [
+      "<cookie button=\"${1}\">${0}</cookie>"
+    ]
+  },
+  "status": {
+    "prefix": [
+      "status"
+    ],
+    "description": "Ponto de status: type=online|busy|offline|warning",
+    "body": [
+      "<status type=\"${1}\">${0}</status>"
+    ]
+  },
+  "drawer": {
+    "prefix": [
+      "drawer"
+    ],
+    "description": "Painel lateral: trigger, title, side=right|left",
+    "body": [
+      "<drawer trigger=\"${1}\" title=\"${2}\" side=\"${3}\">${0}</drawer>"
+    ]
+  },
+  "copy": {
+    "prefix": [
+      "copy"
+    ],
+    "description": "Botão que copia um texto: text=\"npm i gitml\"",
+    "body": [
+      "<copy text=\"${1}\" label=\"${2}\">${0}</copy>"
+    ]
+  },
+  "gallery": {
+    "prefix": [
+      "gallery"
+    ],
+    "description": "Galeria de imagens com zoom ao clicar",
+    "body": [
+      "<gallery cols=\"${1}\">${0}</gallery>"
+    ]
+  },
+  "audio": {
+    "prefix": [
+      "audio"
+    ],
+    "description": "Player de áudio",
+    "body": [
+      "<audio src=\"${1}\" />"
+    ]
+  },
+  "embed": {
+    "prefix": [
+      "embed",
+      "iframe"
+    ],
+    "description": "Incorpora uma página https: src, height",
+    "body": [
+      "<embed src=\"${1}\" height=\"${2}\" title=\"${3}\" />"
+    ]
+  },
+  "figure": {
+    "prefix": [
+      "figure"
+    ],
+    "description": "Imagem com legenda: src, caption",
+    "body": [
+      "<figure src=\"${1}\" caption=\"${2}\" alt=\"${3}\">${0}</figure>"
+    ]
+  },
+  "social": {
+    "prefix": [
+      "social"
+    ],
+    "description": "Ícones de redes: github, twitter, linkedin, instagram, youtube, facebook, mail, site",
+    "body": [
+      "<social github=\"${1}\" twitter=\"${2}\" linkedin=\"${3}\" />"
+    ]
+  },
+  "product": {
+    "prefix": [
+      "product"
+    ],
+    "description": "Produto: name, price, old, image, badge, rating, href, cta",
+    "body": [
+      "<product name=\"${1}\" price=\"${2}\" old=\"${3}\">${0}</product>"
+    ]
+  },
+  "post": {
+    "prefix": [
+      "post",
+      "blog-card"
+    ],
+    "description": "Card de artigo: title, date, author, tag, image, href",
+    "body": [
+      "<post title=\"${1}\" date=\"${2}\" author=\"${3}\">${0}</post>"
+    ]
+  },
+  "metric": {
+    "prefix": [
+      "metric",
+      "kpi"
+    ],
+    "description": "Indicador: label, value, delta=\"+12%\"",
+    "body": [
+      "<metric label=\"${1}\" value=\"${2}\" delta=\"${3}\">${0}</metric>"
+    ]
+  },
+  "dataset": {
+    "prefix": [
+      "dataset"
+    ],
+    "description": "Série de dados dentro de <chart>: label, values=\"5,10,15\", color",
+    "body": [
+      "<dataset label=\"${1}\" values=\"${2}\" color=\"${3}\">${0}</dataset>"
+    ]
+  },
+  "chart": {
+    "prefix": [
+      "chart"
+    ],
+    "description": "Gráfico SVG: type=bar|line|area|donut|pie data=\"Jan:10,Fev:30\" ou <dataset values=\"5,10,15\">",
+    "body": [
+      "<chart type=\"${1}\" data=\"${2}\" labels=\"${3}\">${0}</chart>"
+    ]
+  },
+  "sparkline": {
+    "prefix": [
+      "sparkline"
+    ],
+    "description": "Mini gráfico de linha: values=\"1,4,2,8\"",
+    "body": [
+      "<sparkline values=\"${1}\" />"
+    ]
+  },
+  "checkbox": {
+    "prefix": [
+      "checkbox"
+    ],
+    "description": "Caixa de seleção: label, name, checked, bind",
+    "body": [
+      "<checkbox label=\"${1}\" name=\"${2}\" checked=\"${3}\" />"
+    ]
+  },
+  "switch": {
+    "prefix": [
+      "switch",
+      "toggle"
+    ],
+    "description": "Interruptor liga/desliga: label, name, checked, bind",
+    "body": [
+      "<switch label=\"${1}\" name=\"${2}\" checked=\"${3}\" />"
+    ]
+  },
+  "radio": {
+    "prefix": [
+      "radio"
+    ],
+    "description": "Grupo de opções: label, name, options=\"A,B,C\", value",
+    "body": [
+      "<radio label=\"${1}\" name=\"${2}\" options=\"${3}\" />"
+    ]
+  },
+  "range": {
+    "prefix": [
+      "range",
+      "slider-input"
+    ],
+    "description": "Controle deslizante: label, min, max, value, step, bind",
+    "body": [
+      "<range label=\"${1}\" name=\"${2}\" min=\"${3}\" />"
+    ]
+  },
+  "search": {
+    "prefix": [
+      "search"
+    ],
+    "description": "Busca; com target=\".g-card\" filtra os elementos ao digitar",
+    "body": [
+      "<search placeholder=\"${1}\" target=\"${2}\" />"
+    ]
+  },
+  "upload": {
+    "prefix": [
+      "upload",
+      "file"
+    ],
+    "description": "Área de envio de arquivos: label, hint, accept, name, multiple",
+    "body": [
+      "<upload label=\"${1}\" hint=\"${2}\" accept=\"${3}\" />"
+    ]
+  },
+  "login": {
+    "prefix": [
+      "login"
+    ],
+    "description": "Formulário de login pronto: title, action, button",
+    "body": [
+      "<login title=\"${1}\" action=\"${2}\" button=\"${3}\">${0}</login>"
+    ]
+  },
+  "contact": {
+    "prefix": [
+      "contact"
+    ],
+    "description": "Formulário de contato pronto: title, action, button",
+    "body": [
+      "<contact title=\"${1}\" action=\"${2}\" button=\"${3}\">${0}</contact>"
+    ]
+  },
+  "div": {
+    "prefix": [
+      "div"
+    ],
+    "description": "Elemento HTML <div> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<div>${0}</div>"
+    ]
+  },
+  "span": {
+    "prefix": [
+      "span"
+    ],
+    "description": "Elemento HTML <span> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<span>${0}</span>"
+    ]
+  },
+  "a": {
+    "prefix": [
+      "a"
+    ],
+    "description": "Elemento HTML <a> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<a>${0}</a>"
+    ]
+  },
+  "b": {
+    "prefix": [
+      "b"
+    ],
+    "description": "Elemento HTML <b> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<b>${0}</b>"
+    ]
+  },
+  "i": {
+    "prefix": [
+      "i"
+    ],
+    "description": "Elemento HTML <i> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<i>${0}</i>"
+    ]
+  },
+  "u": {
+    "prefix": [
+      "u"
+    ],
+    "description": "Elemento HTML <u> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<u>${0}</u>"
+    ]
+  },
+  "s": {
+    "prefix": [
+      "s"
+    ],
+    "description": "Elemento HTML <s> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<s>${0}</s>"
+    ]
+  },
+  "em": {
+    "prefix": [
+      "em"
+    ],
+    "description": "Elemento HTML <em> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<em>${0}</em>"
+    ]
+  },
+  "strong": {
+    "prefix": [
+      "strong"
+    ],
+    "description": "Elemento HTML <strong> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<strong>${0}</strong>"
+    ]
+  },
+  "sub": {
+    "prefix": [
+      "sub"
+    ],
+    "description": "Elemento HTML <sub> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<sub>${0}</sub>"
+    ]
+  },
+  "sup": {
+    "prefix": [
+      "sup"
+    ],
+    "description": "Elemento HTML <sup> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<sup>${0}</sup>"
+    ]
+  },
+  "main": {
+    "prefix": [
+      "main"
+    ],
+    "description": "Elemento HTML <main> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<main>${0}</main>"
+    ]
+  },
+  "article": {
+    "prefix": [
+      "article"
+    ],
+    "description": "Elemento HTML <article> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<article>${0}</article>"
+    ]
+  },
+  "aside": {
+    "prefix": [
+      "aside"
+    ],
+    "description": "Elemento HTML <aside> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<aside>${0}</aside>"
+    ]
+  },
+  "header": {
+    "prefix": [
+      "header"
+    ],
+    "description": "Elemento HTML <header> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<header>${0}</header>"
+    ]
+  },
+  "time": {
+    "prefix": [
+      "time"
+    ],
+    "description": "Elemento HTML <time> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<time>${0}</time>"
+    ]
+  },
+  "address": {
+    "prefix": [
+      "address"
+    ],
+    "description": "Elemento HTML <address> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<address>${0}</address>"
+    ]
+  },
+  "pre": {
+    "prefix": [
+      "pre"
+    ],
+    "description": "Elemento HTML <pre> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<pre>${0}</pre>"
+    ]
+  },
+  "abbr": {
+    "prefix": [
+      "abbr"
+    ],
+    "description": "Elemento HTML <abbr> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<abbr>${0}</abbr>"
+    ]
+  },
+  "cite": {
+    "prefix": [
+      "cite"
+    ],
+    "description": "Elemento HTML <cite> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<cite>${0}</cite>"
+    ]
+  },
+  "del": {
+    "prefix": [
+      "del"
+    ],
+    "description": "Elemento HTML <del> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<del>${0}</del>"
+    ]
+  },
+  "ins": {
+    "prefix": [
+      "ins"
+    ],
+    "description": "Elemento HTML <ins> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<ins>${0}</ins>"
+    ]
+  },
+  "q": {
+    "prefix": [
+      "q"
+    ],
+    "description": "Elemento HTML <q> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<q>${0}</q>"
+    ]
+  },
+  "label": {
+    "prefix": [
+      "label"
+    ],
+    "description": "Elemento HTML <label> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<label>${0}</label>"
+    ]
+  },
+  "fieldset": {
+    "prefix": [
+      "fieldset"
+    ],
+    "description": "Elemento HTML <fieldset> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<fieldset>${0}</fieldset>"
+    ]
+  },
+  "legend": {
+    "prefix": [
+      "legend"
+    ],
+    "description": "Elemento HTML <legend> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<legend>${0}</legend>"
+    ]
+  },
+  "details": {
+    "prefix": [
+      "details"
+    ],
+    "description": "Elemento HTML <details> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<details>${0}</details>"
+    ]
+  },
+  "summary": {
+    "prefix": [
+      "summary"
+    ],
+    "description": "Elemento HTML <summary> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<summary>${0}</summary>"
+    ]
+  },
+  "figcaption": {
+    "prefix": [
+      "figcaption"
+    ],
+    "description": "Elemento HTML <figcaption> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<figcaption>${0}</figcaption>"
+    ]
+  },
+  "dl": {
+    "prefix": [
+      "dl"
+    ],
+    "description": "Elemento HTML <dl> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<dl>${0}</dl>"
+    ]
+  },
+  "dt": {
+    "prefix": [
+      "dt"
+    ],
+    "description": "Elemento HTML <dt> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<dt>${0}</dt>"
+    ]
+  },
+  "dd": {
+    "prefix": [
+      "dd"
+    ],
+    "description": "Elemento HTML <dd> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<dd>${0}</dd>"
+    ]
+  },
+  "h5": {
+    "prefix": [
+      "h5"
+    ],
+    "description": "Elemento HTML <h5> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<h5>${0}</h5>"
+    ]
+  },
+  "h6": {
+    "prefix": [
+      "h6"
+    ],
+    "description": "Elemento HTML <h6> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<h6>${0}</h6>"
+    ]
+  },
+  "thead": {
+    "prefix": [
+      "thead"
+    ],
+    "description": "Elemento HTML <thead> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<thead>${0}</thead>"
+    ]
+  },
+  "tbody": {
+    "prefix": [
+      "tbody"
+    ],
+    "description": "Elemento HTML <tbody> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<tbody>${0}</tbody>"
+    ]
+  },
+  "tfoot": {
+    "prefix": [
+      "tfoot"
+    ],
+    "description": "Elemento HTML <tfoot> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<tfoot>${0}</tfoot>"
+    ]
+  },
+  "caption": {
+    "prefix": [
+      "caption"
+    ],
+    "description": "Elemento HTML <caption> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<caption>${0}</caption>"
+    ]
+  },
+  "colgroup": {
+    "prefix": [
+      "colgroup"
+    ],
+    "description": "Elemento HTML <colgroup> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<colgroup>${0}</colgroup>"
+    ]
+  },
+  "picture": {
+    "prefix": [
+      "picture"
+    ],
+    "description": "Elemento HTML <picture> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<picture>${0}</picture>"
+    ]
+  },
+  "source": {
+    "prefix": [
+      "source"
+    ],
+    "description": "Elemento HTML <source> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<source>${0}</source>"
+    ]
+  },
+  "hgroup": {
+    "prefix": [
+      "hgroup"
+    ],
+    "description": "Elemento HTML <hgroup> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<hgroup>${0}</hgroup>"
+    ]
+  },
+  "output": {
+    "prefix": [
+      "output"
+    ],
+    "description": "Elemento HTML <output> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<output>${0}</output>"
+    ]
+  },
+  "br": {
+    "prefix": [
+      "br"
+    ],
+    "description": "Elemento HTML <br> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<br />"
+    ]
+  },
+  "wbr": {
+    "prefix": [
+      "wbr"
+    ],
+    "description": "Elemento HTML <wbr> (atributos seguros: class, id, style, href, data-*…)",
+    "body": [
+      "<wbr />"
+    ]
+  },
+  "style": {
+    "prefix": [
+      "style"
+    ],
+    "description": "CSS próprio (bruto)",
+    "body": [
+      "<style>${0}</style>"
+    ]
+  },
+  "script": {
+    "prefix": [
+      "script"
+    ],
+    "description": "JavaScript próprio (apenas se allowScripts)",
+    "body": [
+      "<script>${0}</script>"
+    ]
+  },
+  "define": {
+    "prefix": [
+      "define",
+      "component"
+    ],
+    "description": "Cria seu componente: <define name=\"x\"> usa {{attr}} e {{children}}",
+    "body": [
+      "<define name=\"${1}\">${0}</define>"
+    ]
+  },
+  "raw": {
+    "prefix": [
+      "raw"
+    ],
+    "description": "HTML puro dentro do GITML",
+    "body": [
+      "<raw>${0}</raw>"
+    ]
+  },
+  "Página GITML (dark)": {
+    "prefix": [
+      "gitml",
+      "page"
+    ],
+    "description": "Esqueleto de uma página",
+    "body": [
+      "<gitml theme=\"${1|dark,light,auto|}\" accent=\"${2|violet,blue,green,orange,pink,red,teal,black|}\" font=\"space-grotesk\" title=\"${3:Meu site}\" description=\"${4}\">",
+      "",
+      "  <nav brand=\"${3:Meu site}\" sticky>",
+      "    <link href=\"#sobre\">Sobre</link>",
+      "    <theme-toggle />",
+      "  </nav>",
+      "",
+      "  <hero eyebrow=\"${5:Novo}\" title=\"${6:Título com **destaque**}\" subtitle=\"${7:Subtítulo}\" cta=\"Começar\" href=\"#sobre\"></hero>",
+      "",
+      "  $0",
+      "",
+      "</gitml>"
+    ]
+  },
+  "App com rotas": {
+    "prefix": [
+      "app",
+      "rotas"
+    ],
+    "description": "App de várias páginas (rotas + menu + rodapé)",
+    "body": [
+      "<gitml theme=\"dark\" accent=\"violet\" title=\"${1:Meu app}\">",
+      "",
+      "  <nav brand=\"${1:Meu app}\" sticky>",
+      "    <link href=\"/\">Início</link>",
+      "    <link href=\"/sobre\">Sobre</link>",
+      "    <theme-toggle />",
+      "  </nav>",
+      "",
+      "  <route path=\"/\" title=\"Início\">",
+      "    <hero title=\"${2:Olá}\" subtitle=\"${3}\"></hero>",
+      "  </route>",
+      "",
+      "  <route path=\"/sobre\" title=\"Sobre\">",
+      "    <section title=\"Sobre\">$0</section>",
+      "  </route>",
+      "",
+      "  <notfound><section title=\"404\"><p>Página não encontrada.</p></section></notfound>",
+      "",
+      "</gitml>"
+    ]
+  },
+  "Componente próprio (define)": {
+    "prefix": [
+      "define",
+      "meu-componente"
+    ],
+    "description": "Cria um componente reutilizável",
+    "body": [
+      "<define name=\"${1:meu-componente}\">",
+      "  <card title=\"{{${2:titulo}}}\">{{children}}</card>",
+      "</define>"
+    ]
+  },
+  "Contador com estado": {
+    "prefix": [
+      "contador",
+      "state"
+    ],
+    "description": "Estado reativo sem JavaScript",
+    "body": [
+      "<state name=\"${1:n}\" value=\"0\" />",
+      "<p>Valor: {\\$${1:n}}</p>",
+      "<button action=\"inc:${1:n}\">+1</button>",
+      "<button action=\"dec:${1:n}\" variant=\"outline\">−1</button>"
+    ]
+  },
+  "Documento HTML completo (.gitml)": {
+    "prefix": [
+      "html",
+      "documento",
+      "html-gitml"
+    ],
+    "description": "Documento com <html>, <head> e <body> dentro de um .gitml",
+    "body": [
+      "<html lang=\"pt-BR\" theme=\"${1|dark,light,auto|}\" accent=\"${2|violet,blue,green,orange,pink,red,teal,black|}\" font=\"space-grotesk\">",
+      "  <head>",
+      "    <title>${3:Meu site}</title>",
+      "    <meta name=\"description\" content=\"${4:Descrição da página}\">",
+      "    <link rel=\"icon\" href=\"${5:favicon.png}\">",
+      "    <style>",
+      "      ${6:/* seu CSS */}",
+      "    </style>",
+      "  </head>",
+      "  <body>",
+      "    <nav brand=\"${3:Meu site}\" sticky>",
+      "      <link href=\"#sobre\">Sobre</link>",
+      "      <theme-toggle />",
+      "    </nav>",
+      "    <main>",
+      "      $0",
+      "    </main>",
+      "  </body>",
+      "</html>"
+    ]
+  },
+  "Incluir arquivo": {
+    "prefix": [
+      "include"
+    ],
+    "description": "Importa outro arquivo .gitml",
+    "body": [
+      "<include src=\"${1:components/menu.gitml}\" />"
+    ]
+  },
+  "Rota em arquivo": {
+    "prefix": [
+      "route-src"
+    ],
+    "description": "Página em arquivo separado (estilo pages/)",
+    "body": [
+      "<route path=\"/${1:sobre}\" title=\"${2:Sobre}\" src=\"pages/${1:sobre}.gitml\" />"
+    ]
+  },
+  "Repetir (each)": {
+    "prefix": [
+      "each"
+    ],
+    "description": "Repete o conteúdo para cada item",
+    "body": [
+      "<each items=\"${1:A,B,C}\" as=\"${2:x}\">",
+      "  $0",
+      "</each>"
+    ]
+  }
+}
