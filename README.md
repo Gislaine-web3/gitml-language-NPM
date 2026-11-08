@@ -1,244 +1,409 @@
 
-<a href="https://www.npmjs.com/package/gitml">
-  <img src="https://img.shields.io/npm/v/gitml?style=for-the-badge&logo=npm&label=NPM&color=CB3837" alt="Versão NPM">
-</a>
+ 
+# GITML — Linguagem de Marcação para Interfaces Web
 
-<a href="https://www.npmjs.com/package/gitml">
-  <img src="https://img.shields.io/npm/dm/gitml?style=for-the-badge&logo=npm&label=Downloads&color=CB3837" alt="Downloads NPM">
-</a>
+**Crie sites modernos usando uma sintaxe simples, componentes declarativos e HTML semântico.**
 
+GITML é uma linguagem de marcação criada para facilitar o desenvolvimento de interfaces web. Ela combina elementos familiares do HTML5 com componentes próprios, recursos declarativos, estados reativos e ferramentas para acelerar a criação de páginas.
 
-
-
-
-# GITML 0.1.1
-
-**GITML** é uma linguagem de marcação declarativa para criar páginas e pequenos apps web modernos com componentes prontos. Você escreve `.gitml`; o motor entrega HTML, CSS e JavaScript de navegador — **sem build, sem dependências**.
-
-- **124 componentes GITML** (hero, grid, cards, tabs, gráficos, formulários, tabelas…) **+ 45 tags HTML** aceitas como estão (`div`, `span`, `a`, `details`…) → HTML e GITML se misturam.
-- **Rotas** (`<route path="/sobre">`), **estado reativo** (`<state>`, `{$n}`, `action="inc:n"`) e **arquivos importáveis** (`<include>`), sem escrever JavaScript.
-- Funciona **dentro do HTML** *e* **fora dele** (CLI, Node, VS Code).
-- Visual padrão: tema escuro, destaque violeta, grade e brilho no topo — `theme="light|dark|auto"`.
-
-> **Escopo, com honestidade:** o GITML roda no navegador (SPA com rotas por `#/caminho`). Não faz SSR/hidratação, não tem ecossistema npm de componentes, e não substitui React/Next em apps grandes. Para sites, landing pages, painéis, documentação e protótipos ele dispensa HTML/CSS/JS; para o resto, pode ser usado como formato de autoria junto com eles.
+Com GITML, você pode construir landing pages, dashboards, lojas virtuais, portfólios, sites institucionais e interfaces modernas sem precisar escrever JavaScript para cada interação visual.
 
 ---
 
-## Comece em 1 minuto
+## ✨ Principais recursos
 
-### Fora do HTML (CLI)
+- **HTML semântico:** suporte a `header`, `nav`, `main`, `section`, `article`, `aside`, `footer`, `figure` e outros elementos.
+- **Componentes prontos:** cards, botões, badges, métricas, tabelas, gráficos e muito mais.
+- **Navegação:** links, menus, dropdowns, abas e navegação por âncoras.
+- **Interatividade declarativa:** estados, ações, formulários, notificações e componentes interativos.
+- **Design:** temas, cores, fontes, espaçamentos, animações e variantes visuais.
+- **Responsividade:** grades e layouts adaptáveis.
+- **Gráficos e dados:** charts, sparklines, métricas e indicadores.
+- **Acessibilidade:** estrutura semântica, textos alternativos e identificação de campos.
+- **VS Code:** autocompletar, documentação de componentes, hover, diagnósticos e prévia.
+- **CLI:** execução e visualização local dos projetos.
 
-```bash
-node bin/gitml.js new meu-site      # cria o projeto (rotas, componentes, páginas)
-cd meu-site
-node ../bin/gitml.js dev            # http://localhost:4173 — recarrega ao salvar
+## 📦 Estrutura de um projeto
+
+Um projeto GITML pode ser organizado assim:
+
+```text
+meu-projeto/
+├── index.gitml
+├── pages/
+│   ├── sobre.gitml
+│   └── contato.gitml
+├── assets/
+│   ├── images/
+│   └── icons/
+└── README.md
 ```
 
-Para usar o comando `gitml` em qualquer pasta: `npm link` dentro desta pasta.
+## 🚀 Primeiro projeto
 
-| Comando | O que faz |
-| --- | --- |
-| `gitml new <nome>` | cria um projeto novo |
-| `gitml start [arquivo\|pasta\|porta]` | **abre o site no navegador** em `http://localhost:4173` (recarrega ao salvar) |
-| `gitml serve [porta]` | igual, sem abrir o navegador — ex.: `gitml serve 3000` |
-| `gitml dev [arquivo\|pasta]` | igual ao `serve`, com `--port 3000 --open --lan` |
-| `gitml build [arquivo]` | gera `dist/arquivo.html` (nunca sobrescreve um `.html` seu); com `--out pasta` gera o site pronto para publicar |
-| `gitml check [arquivos]` | procura erros e avisos (saída 1 se houver erro — bom para CI) |
-| `gitml fmt <arquivo> [--write]` | formata o código |
-| `gitml components [--md\|--json]` | lista os componentes |
+Crie um arquivo chamado `index.gitml`:
 
-### Abrir no navegador (localhost) — e por que `npx serve` não basta
+```html
+<gitml
+  theme="dark"
+  accent="violet"
+  font="inter"
+  title="Meu primeiro site GITML"
+  description="Criado com GITML">
 
-Um arquivo `.gitml` **não é uma página**: o navegador não sabe o que fazer com ele. Servidores estáticos comuns (`npx serve`, `python -m http.server`) entregam o `.gitml` como arquivo qualquer → o navegador **baixa** ou mostra o código. Quem transforma o `.gitml` em site é o motor do GITML. Três jeitos de abrir, todos testados:
+  <head lang="pt-BR" />
 
-| Jeito | Como | Funciona com |
-| --- | --- | --- |
-| **VS Code** | botão 🌐 no topo do editor, `Ctrl+Alt+B` ou *GITML: Abrir no navegador* | `.gitml` **e** `.html` com GITML |
-| **Terminal do VS Code** | `gitml start` · `gitml serve 3000` — o comando `gitml` é instalado **pela extensão** em todo terminal novo | `.gitml` puro, HTML com GITML, `<include>`, rotas |
-| **Terminal (CLI)** | `node bin/gitml.js start` (ou `npm link` para ter `gitml` em qualquer lugar) | idem |
-| **Servidor estático** (`npx serve`, `python -m http.server`, Live Server) | abra um **`.html`** que carrega o `gitml.js`, ou `viewer.html?src=index.gitml` | qualquer servidor |
+  <body>
+    <header>
+      <nav brand="Meu Site">
+        <link href="#inicio">Início</link>
+        <link href="#sobre">Sobre</link>
+        <link href="#contato">Contato</link>
+      </nav>
+    </header>
 
-O `gitml start`/`serve` abre `.gitml` direto (`http://localhost:4173/index.gitml`), serve a pasta toda, recarrega a aba ao salvar e usa sempre o `gitml.js` local (mesmo que o seu HTML aponte para a CDN).
+    <main id="inicio">
+      <hero
+        eyebrow="MEU PRIMEIRO PROJETO"
+        title="Bem-vindo ao GITML"
+        subtitle="Crie interfaces modernas usando componentes declarativos."
+        cta="Conhecer" href="#sobre" />
 
-**Tela branca?** Quase sempre é um destes:
-1. O arquivo foi aberto por `file://` (duplo clique) — use um dos jeitos acima; a página agora mostra um painel explicando isso.
-2. **O `gitml.js` não está na pasta servida** — é o caso clássico de `npx serve .` rodado na pasta errada (por exemplo, na pasta de cima): o navegador mostra o `<title>` da página, mas o corpo fica vazio, porque o `npx serve` não conhece o GITML e o `gitml.js` não foi encontrado. Com `gitml start` isso não acontece (o servidor entrega o motor sozinho). Nos HTML do projeto e nos modelos (`gitml new`, snippets `gitml-html`) agora aparece um cartão explicando o problema em vez de uma página em branco.
-3. Você rodou o servidor na pasta errada (confira o endereço `localhost:PORTA/` e a pasta do terminal).
-4. Abra o Console (`F12`) — erros do GITML aparecem com `[GITML]` e, em `localhost`, num painel no canto da página.
+      <section id="sobre"
+        title="Simples de construir"
+        subtitle="Use componentes prontos para desenvolver suas páginas.">
 
-### Documento HTML completo em `.gitml`
+        <grid cols="3" gap="20">
+          <card title="Componentes" icon="layers">
+            Utilize elementos prontos para construir interfaces.
+          </card>
 
-`<html>`, `<head>`, `<body>`, `<main>`, `<div>`… funcionam como em HTML. Tudo do `<head>` (`title`, `meta`, `link rel`, `style`, `script`, `base`) vai para o `<head>` real; `class`/`style` do `<body>` vão para o `<body>` real.
+          <card title="Design" icon="palette">
+            Personalize cores, temas, fontes e layouts.
+          </card>
 
-```gitml
-<!DOCTYPE html>
-<html lang="pt-BR" theme="dark" accent="violet" font="space-grotesk">
-  <head>
-    <title>Meu site</title>
-    <meta name="description" content="Descrição">
-    <link rel="icon" href="favicon.png">
-    <style>.destaque { color: gold }</style>
-  </head>
-  <body class="minha-classe">
-    <nav brand="Meu site" sticky><link href="#sobre">Sobre</link><theme-toggle /></nav>
-    <main>
-      <hero title="Olá, **mundo!**"></hero>
-      <div class="destaque">HTML puro também vale</div>
+          <card title="Interatividade" icon="zap">
+            Trabalhe com estados e ações declarativas.
+          </card>
+        </grid>
+      </section>
+
+      <section id="contato" title="Entre em contato">
+        <button href="#inicio" variant="primary">
+          Voltar ao início
+        </button>
+      </section>
     </main>
+
+    <footer>
+      <p>Desenvolvido com GITML.</p>
+    </footer>
   </body>
-</html>
-```
-
-### Dentro do HTML
-
-```html
-<!doctype html>
-<html lang="pt-BR">
-<head>
-  <meta charset="utf-8">
-  <script src="./gitml.js" data-src="index.gitml"></script>   <!-- lê um arquivo .gitml -->
-</head>
-<body></body>
-</html>
-```
-
-ou escreva o GITML na própria página:
-
-```html
-<script src="./gitml.js"></script>
-<script type="text/gitml">
-  <gitml theme="dark" accent="violet" title="Meu projeto">
-    <hero title="Olá, **mundo!**" subtitle="Feito com GITML." cta="Começar" href="#"></hero>
-  </gitml>
-</script>
-```
-
-> Para buscar arquivos `.gitml` (`data-src`, `<include>`, `<route src>`) abra a página por um servidor (`gitml dev`, `python -m http.server`…), não por `file://`.
-
-### Pela API (Node)
-
-```js
-const gitml = require("./gitml.js");
-const out = gitml.compile(source, { allowScripts: false, resolve, file });
-out.html; out.errors; out.warnings;   // documento completo, erros, avisos
-gitml.format(source);                  // formatador
-gitml.components();                    // catálogo
-```
-
----
-
-## Apps com várias páginas (estilo Next/React)
-
-```gitml
-<gitml theme="dark" accent="violet" title="Meu app">
-  <include src="components/menu.gitml" />          <!-- menu e rodapé fora das rotas = layout -->
-
-  <route path="/" title="Início">
-    <hero title="Olá" subtitle="Um app em GITML"></hero>
-  </route>
-
-  <route path="/produtos" title="Produtos" src="pages/produtos.gitml" />   <!-- como a pasta pages/ -->
-  <route path="/post/:id" title="Post">Post <param name="id" /></route>     <!-- rota dinâmica -->
-  <notfound><empty title="404 — não encontrada" /></notfound>
-
-  <include src="components/rodape.gitml" />
 </gitml>
 ```
 
-Links como `<link href="/produtos">` funcionam sozinhos (`#/produtos`), o link da página atual recebe `aria-current`, o título da aba muda por rota e links diretos (`#/dashboard`) abrem na página certa.
+## 🧱 HTML semântico
 
-## Estado reativo sem JavaScript
+GITML permite combinar componentes próprios com elementos tradicionais do HTML5.
 
-```gitml
-<state name="n" value="0" persist />          <!-- persist guarda no navegador -->
-<p>Contador: {$n}</p>
-<button action="inc:n">+1</button>
-<button action="reset:n" variant="ghost">Zerar</button>
-<show when="n >= 5"><alert type="success" title="Passou de 5!"></alert></show>
-<switch label="Avançado" bind="ativo" />      <!-- bind liga o controle ao estado -->
-<range label="Volume" bind="vol" />  <p>{$vol}</p>
+| Elemento | Utilização |
+|---|---|
+| `head` | Metadados do documento |
+| `body` | Conteúdo da página |
+| `header` | Cabeçalho |
+| `nav` | Navegação |
+| `main` | Conteúdo principal |
+| `section` | Seções da página |
+| `article` | Conteúdo independente |
+| `aside` | Conteúdo complementar |
+| `footer` | Rodapé |
+| `figure` | Imagens e legendas |
+| `address` | Informações de contato |
+
+Você pode organizar seu site com a mesma estrutura semântica utilizada no desenvolvimento web tradicional.
+
+## 🎨 Componentes disponíveis
+
+Abaixo estão exemplos de componentes demonstrados no projeto:
+
+### Layout
+- `container`
+- `section`
+- `grid`
+- `row`
+- `col`
+- `split`
+- `spacer`
+- `hero`
+
+### Interface
+- `button`
+- `badge`
+- `card`
+- `alert`
+- `feature`
+- `metric`
+- `stat`
+- `status`
+- `progress`
+
+### Navegação
+- `nav`
+- `link`
+- `dropdown`
+- `tabs`
+- `tab`
+- `search`
+- `breadcrumb`
+
+### Dados e visualizações
+- `chart`
+- `sparkline`
+- `rating`
+- `table`
+- `metric`
+- `stat`
+- `carousel`
+
+### Formulários
+- `form`
+- `input`
+- `select`
+- `textarea`
+- `checkbox`
+- `submit`
+- `newsletter`
+
+### Interatividade
+- `state`
+- `actions`
+- `toast`
+- `drawer`
+- `accordion`
+- `modal`
+- `theme-toggle`
+- `cookie`
+- `backtotop`
+
+A lista é ilustrativa. Consulte o catálogo implementado no runtime `gitml.js` para verificar todos os componentes e seus atributos.
+
+## 🔗 Links, botões e navegação
+
+Links podem direcionar para outras páginas, sites externos ou seções do próprio documento.
+
+```html
+<link href="#servicos">Nossos serviços</link>
+
+<link href="https://example.com" target="_blank">
+  Site externo
+</link>
+
+<button href="#contato" variant="primary">
+  Fale conosco
+</button>
 ```
 
-Ações: `inc:n`, `dec:n`, `set:n=10`, `toggle:aberto`, `reset:n` (separe várias com `;`). Condições de `show`: `ativo`, `!ativo`, `n > 3`, `plano == "pro"`. Em JavaScript: `GitmlState.get/set`, `GitmlToast("mensagem")`.
+## 🃏 Cards e grades
 
-## Repetição, componentes próprios e includes
+```html
+<grid cols="3" gap="20">
+  <card title="Primeiro card" icon="star">
+    Conteúdo do primeiro card.
+  </card>
 
-```gitml
-<each items="Rápido,Moderno,Completo" as="x">
-  <feature icon="sparkles" title="{{x}}">Item {{index}}</feature>
-</each>
+  <card title="Segundo card" icon="code">
+    Conteúdo do segundo card.
+  </card>
 
-<define name="aviso">
-  <alert type="success" title="{{titulo}}">{{children}}</alert>
-</define>
-<aviso titulo="Tudo certo">Compilou.</aviso>
+  <card title="Terceiro card" icon="rocket">
+    Conteúdo do terceiro card.
+  </card>
+</grid>
 ```
 
-`<if value="{{x}}" is="pro">…</if>` decide em tempo de compilação. `<style>` aceita CSS próprio; `<script>` só roda com `allowScripts` (o navegador e a CLI ligam; o `compile()` da API vem desligado).
+## 📊 Gráficos
 
-## Os componentes
+```html
+<chart
+  type="bar"
+  title="Visitas por mês"
+  data="Janeiro:120,Fevereiro:180,Março:240,Abril:310"
+  height="280" />
+```
 
-A lista completa, gerada do código, está em **[docs/COMPONENTES.md](docs/COMPONENTES.md)** (ou `gitml components`). Resumo por grupo:
+Outros exemplos incluem gráficos de linha, área e pizza, conforme os tipos implementados no runtime.
 
-| Grupo | Exemplos |
-| --- | --- |
-| Estrutura / Layout | `gitml` `section` `container` `grid` `row` `stack` `split` `bento` `center` `docs` `sidebar` `spacer` `divider` |
-| Navegação | `nav` `link` `breadcrumb` `footer` `dropdown` `toc` `pagination` `stepper` `backtotop` `theme-toggle` |
-| Destaque / Tipografia | `hero` `heading` `h1`–`h4` `p` `lead` `grad` `typed` `quote` `kbd` `mark` `ul` `ol` `code` |
-| Cards e dados | `card` `feature` `stat` `metric` `pricing` `testimonial` `product` `post` `team` `table` `progress` `rating` `countdown` |
-| Gráficos (SVG) | `chart` (`bar` `line` `area` `donut` `pie`) `sparkline` |
-| Feedback | `badge` `alert` `toast` `tooltip` `banner` `skeleton` `spinner` `empty` `cookie` `status` |
-| Interativos | `accordion` `tabs` `modal` `drawer` `carousel` `marquee` `gallery` `copy` |
-| Formulários | `form` `input` `textarea` `select` `checkbox` `radio` `switch` `range` `search` `upload` `newsletter` `login` `contact` |
-| Mídia | `image` `figure` `video` `audio` `map` `embed` `browser` `icon` (82 ícones) `social` |
-| App / Estado | `route` `notfound` `param` `include` `state` `bind` `show` `trigger` `each` `if` |
-| HTML puro | `div` `span` `a` `b` `i` `em` `strong` `header` `main` `article` `aside` `details` `dl` … |
+## ⚡ Estados reativos
 
-Atributos de layout aceitos em qualquer componente: `class` `id` `style` `bg` `color` `pad` `gap` `width` `mt` `mb` `radius` `shadow` `hide="mobile|tablet|desktop"` `animate="up|fade|zoom"` `align`.
+GITML permite declarar estados e utilizá-los em diferentes partes da página.
 
-Atributos da raiz `<gitml>`: `theme` (`dark` · `light` · `auto`), `accent` (`violet blue green orange pink red teal black` ou `#hex`), `font` (`space-grotesk inter sora manrope outfit dm-sans serif poppins jakarta geist mono` ou qualquer fonte do Google Fonts), `title`, `description`, `icon` (URL ou emoji), `lang`, `radius`, `container`, `og-image`, `canonical`, `theme-color`, `motion="off"`.
+```html
+<state name="contador" value="0" persist />
+
+<card title="Contador interativo">
+  <metric label="Total" value="{$contador}" />
+
+  <actions>
+    <button action="inc:contador">
+      Adicionar
+    </button>
+
+    <button action="reset:contador" variant="outline">
+      Zerar
+    </button>
+  </actions>
+</card>
+```
+
+## 📝 Formulários
+
+```html
+<form action="#" method="get">
+  <input
+    label="Nome"
+    name="nome"
+    placeholder="Digite seu nome"
+    required />
+
+  <input
+    label="E-mail"
+    name="email"
+    type="email"
+    required />
+
+  <textarea
+    label="Mensagem"
+    name="mensagem" />
+
+  <submit>Enviar</submit>
+</form>
+```
+
+Configure um backend quando precisar receber e processar dados reais.
+
+## 🧩 GITML dentro de HTML
+
+Também é possível utilizar blocos GITML dentro de documentos HTML:
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Meu projeto</title>
+</head>
+<body>
+  <main>
+    <h1>Minha página HTML</h1>
+
+    <script type="text/gitml">
+      <section title="Criado com GITML">
+        <grid cols="2">
+          <card title="Componente 1">
+            Primeiro exemplo.
+          </card>
+
+          <card title="Componente 2">
+            Segundo exemplo.
+          </card>
+        </grid>
+      </section>
+    </script>
+  </main>
+</body>
+</html>
+```
+
+A extensão VS Code oferece suporte ao reconhecimento de blocos `text/gitml` dentro de documentos HTML.
+
+## 🖥️ Executar com o CLI
+
+Na raiz do projeto, utilize:
+
+```bash
+node bin/gitml.js dev index.gitml --port 3000 --open
+```
+
+Esse comando inicia o ambiente local e abre o projeto no navegador.
+
+Você também pode utilizar outra porta:
+
+```bash
+node bin/gitml.js dev index.gitml --port 4173 --open
+```
+
+## 💻 Executar com a extensão do VS Code
+
+A extensão GITML oferece ferramentas integradas ao editor.
+
+Recursos:
+
+- Autocompletar componentes e atributos.
+- Sugestões de valores de atributos.
+- Documentação dos componentes ao passar o mouse.
+- Diagnósticos de erros e avisos.
+- Fechamento automático de tags.
+- Formatação de documentos.
+- Catálogo de componentes.
+- Prévia dentro do VS Code.
+- Abertura do projeto no navegador usando servidor local.
+- Geração de HTML.
+
+### Comandos da extensão
+
+| Comando | Função |
+|---|---|
+| `gitml.preview` | Abre a prévia no VS Code |
+| `gitml.openBrowser` | Abre o projeto no navegador |
+| `gitml.serve` | Inicia o servidor e abre o navegador |
+| `gitml.stopServer` | Para os servidores |
+| `gitml.build` | Gera o HTML |
+| `gitml.components` | Explora o catálogo de componentes |
+
+Você também pode utilizar os comandos pela paleta de comandos do VS Code.
+
+## 📁 Gerar HTML
+
+Abra um arquivo `.gitml` e execute o comando de geração de HTML na extensão.
+
+O GITML compila a marcação e produz um documento HTML para utilização no navegador.
+
+## 🛠️ Tecnologias e arquitetura
+
+O projeto possui:
+
+- `gitml.js`: runtime, catálogo de componentes e compilação.
+- `bin/gitml.js`: interface de linha de comando.
+- `vscode-extension/`: integração com o Visual Studio Code.
+- `server.js`: servidor local utilizado pela extensão.
+
+Consulte os arquivos do projeto para detalhes sobre a implementação e os recursos disponíveis.
+
+## 🌟 Exemplo completo
+
+Veja o projeto de demonstração:
+
+```text
+exemplos/
+└── gitml-studio.gitml
+```
+
+Ele demonstra:
+
+- Navegação.
+- Hero e apresentação.
+- Cards e grids.
+- Componentes interativos.
+- Estados reativos.
+- Gráficos.
+- Formulários.
+- Layout semântico.
+- Temas e personalização.
+
+## 📜 Licença
+
+Consulte o arquivo de licença presente no repositório para conhecer as condições de utilização e distribuição do projeto.
 
 ---
 
-## VS Code
-
-Instale `gitml-0.4.2.vsix` (na raiz desta pasta: **Extensions → ⋯ → Install from VSIX…**) e recarregue a janela. A extensão traz:
-
-- **ícone** do `.gitml` no Explorer, nas abas e no Ctrl+P (declarado como ícone da *linguagem*, funciona com o tema de ícones padrão);
-- realce de sintaxe (CSS e JS dentro de `<style>`/`<script>`), **autocompletar** de tags, atributos, valores e ícones, **hover** com documentação;
-- **erros e avisos** ao vivo (com "você quis dizer `<hero>`?"), **formatador**, fechamento automático de tags, snippets;
-- **prévia ao vivo** (`Ctrl+Alt+G`), *Abrir no navegador*, *Gerar HTML* e *Explorar e inserir componentes*.
-
-Se o ícone não aparecer: **Developer: Reload Window**; se usar Material Icon Theme (ou outro que ignore ícones de linguagem), escolha **Preferences: File Icon Theme → GITML File Icons**.
-
-Para gerar um `.vsix` novo: `npm run vsix` — regenera gramática e snippets, copia o motor único para um pacote temporário e grava `gitml-<versão>.vsix` na raiz.
-
-## Desenvolvimento
-
-```bash
-node test/run.js            # 50+ testes (motor, segurança, CLI, extensão)
-node test/runtime.test.js   # comportamento no navegador (precisa: npm i -D jsdom)
-node scripts/sync.js        # regenera gramática, snippets e docs a partir do motor
-node test/extension.test.js # extensão do VS Code (com um "vscode" simulado)
-```
-
-### Mapa da pasta (um único motor)
-
-| Caminho | O que é |
-| --- | --- |
-| `gitml.js` | **o motor** (compilador + runtime). Existe uma só cópia: a extensão e o CLI usam este arquivo |
-| `server.js` | servidor local (`gitml start` / `serve`, botão 🌐 da extensão) |
-| `bin/` | o comando `gitml` (`gitml.js` + atalhos `gitml` e `gitml.cmd`) |
-| `gitml-0.4.2.vsix` | a extensão do VS Code, pronta para instalar |
-| `vscode-extension/` | código-fonte da extensão (sem cópia do motor; o `npm run vsix` o inclui no pacote) |
-| `examples/` · `sites-de-teste/` | exemplos e sites completos (Orbit, etc.) |
-| `index.gitml` · `loja.gitml` · `pagina.gitml` · `projeto.gitml` | páginas de teste |
-| `playground/` · `docs/` · `scripts/` · `test/` · `assets/` | editor local, documentação gerada, scripts, testes, logos |
-
-## Segurança
-
-Textos e URLs são escapados; `javascript:`, `vbscript:` e `data:` perigosos são bloqueados (inclusive disfarçados com tab/quebra de linha); `on*=` é removido em HTML puro e em `<raw>`; `<script>`/`<raw><script>` só com `allowScripts`. Mesmo assim, não compile conteúdo de terceiros com `allowScripts: true`, e revise formulários, links e scripts antes de publicar.
-
-## Licença
-
-MIT. Consulte `LICENSE`.
+**GITML — HTML semântico, componentes declarativos e liberdade para criar.**
