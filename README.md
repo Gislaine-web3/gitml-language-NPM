@@ -1,4 +1,43 @@
 
+<p align="center">
+  <img src="assets/GITML-logo.png" alt="GITML — linguagem de marcação para a web" width="760">
+</p>
+
+<h1 align="center">GITML</h1>
+
+<p align="center">
+  <strong>Crie sites modernos com GITML puro.</strong><br>
+  HTML semântico, componentes declarativos, CLI e extensão para VS Code.
+</p>
+
+<p align="center">
+  <a href="https://github.com/Gislaine-web3/gitml-language-NPM">
+    <img src="https://img.shields.io/github/stars/Gislaine-web3/gitml-language-NPM?style=for-the-badge&logo=github&logoColor=white&color=F59E0B&label=STARS" alt="Estrelas no GitHub">
+  </a>
+  <a href="https://github.com/Gislaine-web3/gitml-language-NPM/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/Gislaine-web3/gitml-language-NPM?style=for-the-badge&color=22C55E&label=LICENSE" alt="Licença">
+  </a>
+  <a href="https://github.com/Gislaine-web3/gitml-language-NPM/tree/main/bin">
+    <img src="https://img.shields.io/badge/CLI-GITML-2563EB?style=for-the-badge&logo=gnubash&logoColor=white" alt="CLI GITML">
+  </a>
+  <a href="https://github.com/Gislaine-web3/gitml-language-NPM/tree/main/vscode-extension">
+    <img src="https://img.shields.io/badge/VS_CODE-EXTENS%C3%83O-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="Extensão VS Code">
+  </a>
+  <a href="https://github.com/Gislaine-web3/gitml-language-NPM">
+    <img src="https://img.shields.io/badge/LANGUAGE-GITML-7C3AED?style=for-the-badge&logo=code&logoColor=white" alt="Linguagem GITML">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/Gislaine-web3/gitml-language-NPM">Código-fonte</a>
+  &nbsp; · &nbsp;
+  <a href="https://github.com/Gislaine-web3/gitml-language-NPM/tree/main/vscode-extension">Extensão VS Code</a>
+  &nbsp; · &nbsp;
+  <a href="https://github.com/Gislaine-web3/gitml-language-NPM/issues">Reportar problema</a>
+</p>
+
+---
+
  
 # GITML — Linguagem de Marcação para Interfaces Web
 
