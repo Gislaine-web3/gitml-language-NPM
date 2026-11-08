@@ -1,40 +1,12 @@
-<p align="center">
-<img src="assets/GITML-logo.png" alt="GITML — linguagem de marcação para a web" width="760">
-</p> <h1 align="center">GITML</h1> <p align="center">
-  <strong>Crie sites modernos com GITML puro.</strong>  
 
-  HTML semântico, componentes declarativos, CLI e extensão para VS Code.
-</p> <p align="center">
-  <a href="https://github.com/Gislaine-web3/gitml-language-NPM">
-    <img src="https://img.shields.io/github/stars/Gislaine-web3/gitml-language-NPM?style=for-the-badge&amp;logo=github&amp;logoColor=white&amp;color=F59E0B&amp;label=STARS" alt="Estrelas no GitHub">
-  </a>
-  <a href="https://github.com/Gislaine-web3/gitml-language-NPM/blob/master/LICENSE">
-    <img src="https://img.shields.io/github/license/Gislaine-web3/gitml-language-NPM?style=for-the-badge&amp;color=22C55E&amp;label=LICENSE" alt="Licença do projeto">
-  </a>
-  <a href="https://github.com/Gislaine-web3/gitml-language-NPM/tree/master/bin">
-    <img src="https://img.shields.io/badge/CLI-GITML-2563EB?style=for-the-badge&amp;logo=gnubash&amp;logoColor=white" alt="CLI GITML">
-  </a>
-  <a href="https://github.com/Gislaine-web3/gitml-language-NPM/tree/master/vscode-extension">
-    <img src="https://img.shields.io/badge/VS_CODE-EXTENS%C3%83O-007ACC?style=for-the-badge&amp;logo=visualstudiocode&amp;logoColor=white" alt="Extensão GITML para VS Code">
-  </a>
-  <a href="https://github.com/Gislaine-web3/gitml-language-NPM">
-    <img src="https://img.shields.io/badge/LANGUAGE-GITML-7C3AED?style=for-the-badge&amp;logo=code&amp;logoColor=white" alt="Linguagem GITML">
-  </a>
-</p> <p align="center">
-  <a href="https://github.com/Gislaine-web3/gitml-language-NPM">Código-fonte</a>
-  &nbsp; · &nbsp;
-  <a href="https://github.com/Gislaine-web3/gitml-language-NPM/tree/master/vscode-extension">Extensão VS Code</a>
-  &nbsp; · &nbsp;
-  <a href="https://github.com/Gislaine-web3/gitml-language-NPM/issues">Reportar problema</a>
-</p>
+<a href="https://www.npmjs.com/package/gitml">
+  <img src="https://img.shields.io/npm/v/gitml?style=for-the-badge&logo=npm&label=NPM&color=CB3837" alt="Versão NPM">
+</a>
 
+<a href="https://www.npmjs.com/package/gitml">
+  <img src="https://img.shields.io/npm/dm/gitml?style=for-the-badge&logo=npm&label=Downloads&color=CB3837" alt="Downloads NPM">
+</a>
 
-
-
-<!-- Depois que `gitml` estiver publicado no npm, você pode acrescentar estes badges:
-<a href="https://www.npmjs.com/package/gitml"><img src="https://img.shields.io/npm/v/gitml?style=for-the-badge&amp;logo=npm&amp;label=NPM" alt="Versão no npm"></a>
-<a href="https://www.npmjs.com/package/gitml"><img src="https://img.shields.io/npm/dm/gitml?style=for-the-badge&amp;logo=npm&amp;label=Downloads" alt="Downloads mensais no npm"></a>
--->
 
 
 
