@@ -1,139 +1,42 @@
- 
 <p align="center">
-  <img src="assets/GITML-logo.png" alt="GITML Logo" width="980">
-</p>
+<img src="assets/GITML-logo.png" alt="GITML — linguagem de marcação para a web" width="760">
+</p> <h1 align="center">GITML</h1> <p align="center">
+  <strong>Crie sites modernos com GITML puro.</strong>  
 
-<h1 align="center">GITML</h1>
-
-<p align="center">
-  <strong>Crie sites modernos com GITML puro.</strong><br>
   HTML semântico, componentes declarativos, CLI e extensão para VS Code.
-</p>
-
-<p align="center">
-  <a href="https://www.npmjs.com/package/gitml">
-    <img src="https://img.shields.io/npm/v/gitml?color=blue&logo=npm&label=npm" alt="NPM Version">
+</p> <p align="center">
+  <a href="https://github.com/Gislaine-web3/gitml-language-NPM">
+    <img src="https://img.shields.io/github/stars/Gislaine-web3/gitml-language-NPM?style=for-the-badge&amp;logo=github&amp;logoColor=white&amp;color=F59E0B&amp;label=STARS" alt="Estrelas no GitHub">
   </a>
-  <a href="https://www.npmjs.com/package/gitml">
-    <img src="https://img.shields.io/npm/dm/gitml?color=blue&logo=npm&label=downloads" alt="NPM Downloads">
+  <a href="https://github.com/Gislaine-web3/gitml-language-NPM/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/Gislaine-web3/gitml-language-NPM?style=for-the-badge&amp;color=22C55E&amp;label=LICENSE" alt="Licença do projeto">
+  </a>
+  <a href="https://github.com/Gislaine-web3/gitml-language-NPM/tree/master/bin">
+    <img src="https://img.shields.io/badge/CLI-GITML-2563EB?style=for-the-badge&amp;logo=gnubash&amp;logoColor=white" alt="CLI GITML">
+  </a>
+  <a href="https://github.com/Gislaine-web3/gitml-language-NPM/tree/master/vscode-extension">
+    <img src="https://img.shields.io/badge/VS_CODE-EXTENS%C3%83O-007ACC?style=for-the-badge&amp;logo=visualstudiocode&amp;logoColor=white" alt="Extensão GITML para VS Code">
   </a>
   <a href="https://github.com/Gislaine-web3/gitml-language-NPM">
-    <img src="https://img.shields.io/github/stars/Gislaine-web3/gitml-language-NPM?style=flat&color=yellow&logo=github" alt="GitHub Stars">
+    <img src="https://img.shields.io/badge/LANGUAGE-GITML-7C3AED?style=for-the-badge&amp;logo=code&amp;logoColor=white" alt="Linguagem GITML">
   </a>
-  <a href="https://github.com/Gislaine-web3/gitml-language-NPM/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/Gislaine-web3/gitml-language-NPM?color=green" alt="License">
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://github.com/Gislaine-web3/gitml-language-NPM">
-    GitHub
-  </a>
-  ·
-  <a href="https://www.npmjs.com/package/gitml">
-    NPM
-  </a>
-  ·
-  <a href="https://marketplace.visualstudio.com/">
-    VS Code
-  </a>
-</p>
-
----
-
-
-<p align="center">
-  <img
-    src="assets/GITML-logo.png"
-    alt="GITML — linguagem declarativa para sites modernos"
-    width="980"
-  >
-</p>
-
-<h1 align="center">GITML</h1>
-
-<p align="center">
-  <strong>Crie sites modernos com GITML puro.</strong><br>
-  HTML semântico, componentes declarativos, CLI e extensão para VS Code.
-</p>
-
-<!-- Distribuição e ferramentas -->
-<p align="center">
-  <a href="https://www.npmjs.com/package/gitml">
-    <img
-      src="https://img.shields.io/npm/v/gitml?style=for-the-badge&logo=npm&logoColor=white&label=NPM&color=CB3837&labelColor=111827"
-      alt="Versão do GITML no npm"
-    >
-  </a>
-  <a href="https://www.npmjs.com/package/gitml">
-    <img
-      src="https://img.shields.io/badge/CLI-GITML-22C55E?style=for-the-badge&logo=gnubash&logoColor=white&labelColor=111827"
-      alt="GITML CLI"
-    >
-  </a>
-  <a href="https://marketplace.visualstudio.com/">
-    <img
-      src="https://img.shields.io/badge/VS_CODE-EXTENS%C3%83O-007ACC?style=for-the-badge&labelColor=111827"
-      alt="Extensão para VS Code — link para o Marketplace"
-    >
-  </a>
-</p>
-
-<!-- Linguagem e tecnologias -->
-<p align="center">
-  <a href="https://github.com/Gislaine-web3/gitml-language-NPM">
-    <img
-      src="https://img.shields.io/badge/LANGUAGE-GITML-2563EB?style=for-the-badge&logo=code&logoColor=white&labelColor=111827"
-      alt="Linguagem GITML"
-    >
-  </a>
-  <a href="https://github.com/Gislaine-web3/gitml-language-NPM">
-    <img
-      src="https://img.shields.io/badge/HTML5-SEM%C3%82NTICO-E34F26?style=for-the-badge&logo=html5&logoColor=white&labelColor=111827"
-      alt="HTML5 semântico"
-    >
-  </a>
-  <a href="https://github.com/Gislaine-web3/gitml-language-NPM">
-    <img
-      src="https://img.shields.io/badge/COMPONENTES-DECLARATIVOS-10B981?style=for-the-badge&labelColor=111827"
-      alt="Componentes declarativos"
-    >
-  </a>
-</p>
-
-<!-- Projeto e comunidade -->
-<p align="center">
-  <a href="https://github.com/Gislaine-web3/gitml-language-NPM">
-    <img
-      src="https://img.shields.io/badge/GITHUB-REPOSIT%C3%93RIO-2563EB?style=for-the-badge&logo=github&logoColor=white&labelColor=111827"
-      alt="Repositório no GitHub"
-    >
-  </a>
-  <a href="https://www.npmjs.com/package/gitml">
-    <img
-      src="https://img.shields.io/npm/dm/gitml?style=for-the-badge&logo=npm&logoColor=white&label=DOWNLOADS&color=22C55E&labelColor=111827"
-      alt="Downloads mensais no npm"
-    >
-  </a>
-  <a href="https://github.com/Gislaine-web3/gitml-language-NPM/stargazers">
-    <img
-      src="https://img.shields.io/github/stars/Gislaine-web3/gitml-language-NPM?style=for-the-badge&logo=github&logoColor=white&label=STARS&color=F59E0B&labelColor=111827"
-      alt="Estrelas no GitHub"
-    >
-  </a>
-</p>
-
-<p align="center">
+</p> <p align="center">
   <a href="https://github.com/Gislaine-web3/gitml-language-NPM">Código-fonte</a>
-  &nbsp; • &nbsp;
-  <a href="https://www.npmjs.com/package/gitml">Pacote npm</a>
-  &nbsp; • &nbsp;
-  <a href="https://marketplace.visualstudio.com/">VS Code Marketplace</a>
-  &nbsp; • &nbsp;
+  &nbsp; · &nbsp;
+  <a href="https://github.com/Gislaine-web3/gitml-language-NPM/tree/master/vscode-extension">Extensão VS Code</a>
+  &nbsp; · &nbsp;
   <a href="https://github.com/Gislaine-web3/gitml-language-NPM/issues">Reportar problema</a>
 </p>
 
-<hr>
+
+
+
+<!-- Depois que `gitml` estiver publicado no npm, você pode acrescentar estes badges:
+<a href="https://www.npmjs.com/package/gitml"><img src="https://img.shields.io/npm/v/gitml?style=for-the-badge&amp;logo=npm&amp;label=NPM" alt="Versão no npm"></a>
+<a href="https://www.npmjs.com/package/gitml"><img src="https://img.shields.io/npm/dm/gitml?style=for-the-badge&amp;logo=npm&amp;label=Downloads" alt="Downloads mensais no npm"></a>
+-->
+
+
 
 
 # GITML 0.1.1
