@@ -1,6 +1,6 @@
  
 <p align="center">
-  <img src="assets/GITML-logo.png" alt="GITML Logo" width="180">
+  <img src="assets/GITML-logo.png" alt="GITML Logo" width="980">
 </p>
 
 <h1 align="center">GITML</h1>
