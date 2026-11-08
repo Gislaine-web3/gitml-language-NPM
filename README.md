@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="assets/GITML-logo.png" alt="GITML — linguagem de marcação para a web" width="760">
+  <img src="assets/GITML-logo.png" alt="GITML — linguagem de marcação para a web" width="960">
 </p>
 
 <h1 align="center">GITML</h1>
