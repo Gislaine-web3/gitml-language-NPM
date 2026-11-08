@@ -33,7 +33,7 @@
   &nbsp; · &nbsp;
   <a href="https://github.com/Gislaine-web3/gitml-language-NPM/tree/main/vscode-extension">Extensão VS Code</a>
   &nbsp; · &nbsp;
-  <a href="https://github.com/Gislaine-web3/gitml-language-NPM/issues">Reportar problema</a>
+ 
 </p>
 
 ---
