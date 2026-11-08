@@ -1,6 +1,6 @@
 {
   "name": "gitml",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "Linguagem declarativa que transforma tags simples em páginas e apps modernos — rotas, estado, componentes e HTML puro, sem build.",
   "main": "gitml.js",
   "bin": {
