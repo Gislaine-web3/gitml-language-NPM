@@ -1,3 +1,50 @@
+ 
+<p align="center">
+  <img src="assets/gitml-logo.png" alt="GITML Logo" width="180">
+</p>
+
+<h1 align="center">GITML</h1>
+
+<p align="center">
+  <strong>Crie sites modernos com GITML puro.</strong><br>
+  HTML semântico, componentes declarativos, CLI e extensão para VS Code.
+</p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/gitml">
+    <img src="https://img.shields.io/npm/v/gitml?color=blue&logo=npm&label=npm" alt="NPM Version">
+  </a>
+  <a href="https://www.npmjs.com/package/gitml">
+    <img src="https://img.shields.io/npm/dm/gitml?color=blue&logo=npm&label=downloads" alt="NPM Downloads">
+  </a>
+  <a href="https://github.com/Gislaine-web3/gitml-language-NPM">
+    <img src="https://img.shields.io/github/stars/Gislaine-web3/gitml-language-NPM?style=flat&color=yellow&logo=github" alt="GitHub Stars">
+  </a>
+  <a href="https://github.com/Gislaine-web3/gitml-language-NPM/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/Gislaine-web3/gitml-language-NPM?color=green" alt="License">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/Gislaine-web3/gitml-language-NPM">
+    GitHub
+  </a>
+  ·
+  <a href="https://www.npmjs.com/package/gitml">
+    NPM
+  </a>
+  ·
+  <a href="https://marketplace.visualstudio.com/">
+    VS Code
+  </a>
+</p>
+
+---
+
+
+
+
+
 # GITML 0.1.1
 
 **GITML** é uma linguagem de marcação declarativa para criar páginas e pequenos apps web modernos com componentes prontos. Você escreve `.gitml`; o motor entrega HTML, CSS e JavaScript de navegador — **sem build, sem dependências**.
