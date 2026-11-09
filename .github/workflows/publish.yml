@@ -3,7 +3,6 @@ name: Publish GITML Extension
 
 on:
   workflow_dispatch:
-
   push:
     tags:
       - "gitml-v*"
@@ -32,6 +31,6 @@ jobs:
         working-directory: gitml/vscode-extension
         run: npm install
 
-      - name: Publish GITML to VS Code Marketplace
+      - name: Publish GITML
         working-directory: gitml/vscode-extension
         run: npx --yes @vscode/vsce@latest publish --oidc
