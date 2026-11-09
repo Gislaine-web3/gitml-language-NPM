@@ -28,9 +28,9 @@ jobs:
           node-version: 22
 
       - name: Install dependencies
-        working-directory: gitml/vscode-extension
+        working-directory: vscode-extension
         run: npm install
 
       - name: Publish GITML
-        working-directory: gitml/vscode-extension
+        working-directory: vscode-extension
         run: npx --yes @vscode/vsce@latest publish --oidc
