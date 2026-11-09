@@ -1,0 +1,37 @@
+
+name: Publish GITML Extension
+
+on:
+  workflow_dispatch:
+
+  push:
+    tags:
+      - "gitml-v*"
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        working-directory: gitml/vscode-extension
+        run: npm install
+
+      - name: Publish GITML to VS Code Marketplace
+        working-directory: gitml/vscode-extension
+        run: npx --yes @vscode/vsce@latest publish --oidc
