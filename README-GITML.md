@@ -1,13 +1,10 @@
 
 <p align="center">
   <img src="assets/banner-gitml.png" alt="GITML — linguagem de marcação para a web" width="960">
-</p>
+</p> 
 
-<p align="center">
-  <img
-    src="assets/GITML-logo.png"
-    alt="GITML — linguagem declarativa para páginas modernas"
-    width="900"
+
+    
   >
 </p>
 
@@ -119,15 +116,18 @@ Escolha como deseja trabalhar:
 
 ## 💻 Extensão do VS Code
 
-### Instalação pelo arquivo VSIX
 
-1. Abra o VS Code.
-2. Acesse **Extensions** com `Ctrl + Shift + X`.
-3. Clique no menu `⋯`.
-4. Selecione **Install from VSIX...**.
-5. Escolha o arquivo `gitml-0.4.2.vsix` fornecido com o projeto.
+Depois, pressione Ctrl + Shift + X, procure GITML e abra a extensão.
 
-> Se o arquivo disponível tiver outra versão, selecione o `.vsix` correspondente.
+Pronto! 🚀
+
+## ou instalar a extensao no terminal
+
+
+```bash
+code --install-extension gislaine-web3.gitml
+```
+
 
 ### Abrir seu site
 
