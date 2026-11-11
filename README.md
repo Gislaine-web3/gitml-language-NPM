@@ -111,6 +111,25 @@ Com GITML, você pode construir landing pages, dashboards, lojas virtuais, portf
 - **VS Code:** autocompletar, documentação de componentes, hover, diagnósticos e prévia.
 - **CLI:** execução e visualização local dos projetos.
 
+<p align="center">
+  <img src="assets/vscode-gitml.png" alt="GITML — linguagem de marcação para a web" width="960">
+</p>
+
+## Destaque: Crypto Platform criado com gitml puro
+
+Dashboard responsivo de criptoativos, escrito em GITML puro em index.gitml. O gráfico BTC/USDT é incorporado do TradingView; os valores de saldo e da lista de ativos.
+
+
+<p align="center">
+  <img src="assets/orbita-crypto.png" alt="GITML — linguagem de marcação para a web" width="960">
+</p>
+
+## Site feito com gitml puro  
+
+<p align="center">
+  <img src="assets/site-gitml.png" alt="GITML — linguagem de marcação para a web" width="960">
+</p>
+
 ## Modo de uso:
 
   
@@ -131,7 +150,7 @@ code --install-extension gislaine-web3.gitml
 
 ### Abrir seu site
 
-Abra um arquivo `.gitml` e use o botão **🌐** da extensão para visualizar o site no navegador.
+Abra um arquivo `index.gitml` e use o botão **🌐** da extensão para visualizar o site no navegador.
 
 Você também pode iniciar pelo terminal integrado:
 
@@ -209,7 +228,7 @@ Entre na pasta e inicie:
 
 ```bash
 cd meu-projeto
-gitml start
+gitml dev
 ```
 
 ## 📦 Estrutura de um projeto
