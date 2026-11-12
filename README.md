@@ -188,7 +188,7 @@ gitml components
 
 
 <p align="center">
-  <img src="./gitml-code-.png" alt="GITML Code Preview" width="900" />
+  <img src="./assets/card-.png" alt="GITML Code Preview" width="900" />
 </p>
 
 <p align="center">
