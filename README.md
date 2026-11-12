@@ -98,6 +98,37 @@ Com GITML, você pode construir landing pages, dashboards, lojas virtuais, portf
 
 ---
 
+## ✨ O que é GITML?
+
+GITML é uma linguagem declarativa para criar páginas modernas usando componentes e uma estrutura independente ou com o HTML.
+
+Este repositório reúne as ferramentas do projeto:
+
+| Ferramenta | Para que serve |
+| :--- | :--- |
+| 🧩 Motor GITML | Interpreta e transforma a marcação GITML |
+| ⚡ CLI | Cria projetos, inicia o servidor, verifica e gera o site |
+| 💻 Extensão do VS Code | Integra o trabalho com arquivos `.gitml` ao editor |
+| 🎨 Sites de exemplo | Mostram a linguagem em projetos prontos para explorar |
+
+> Um ecossistema para escrever, visualizar e desenvolver seus sites com GITML.
+
+## 📚 Navegação
+
+- [🚀 Comece aqui](#-comece-aqui)
+- [💻 Extensão do VS Code](#-extensão-do-vs-code)
+- [⚡ CLI — terminal](#-cli--terminal)
+- [🛠️ Crie seu projeto](#️-crie-seu-projeto)
+- [🎨 Sua primeira página](#-sua-primeira-página)
+- [🌐 Sites prontos para testar](#-sites-prontos-para-testar)
+- [📋 Comandos](#-comandos)
+- [🤝 Contribua](#-contribua)
+- [🌱 Ecossistema GBit](#-ecossistema-gbit)
+- [📄 Licença](#-licença)
+
+
+---
+
 ## ✨ Principais recursos
 
 - **HTML semântico:** suporte a `header`, `nav`, `main`, `section`, `article`, `aside`, `footer`, `figure` e outros elementos.
@@ -111,32 +142,26 @@ Com GITML, você pode construir landing pages, dashboards, lojas virtuais, portf
 - **VS Code:** autocompletar, documentação de componentes, hover, diagnósticos e prévia.
 - **CLI:** execução e visualização local dos projetos.
 
-<p align="center">
+
+
+
+  Escolha como deseja trabalhar:
+
+- **VS Code:** instale a extensão para usar o GITML dentro do editor.
+- **Terminal:** instale o pacote npm e utilize a CLI.
+
+  <p align="center">
   <img src="assets/vscode-gitml.png" alt="GITML — linguagem de marcação para a web" width="960">
 </p>
 
-## Destaque: Crypto Platform criado com gitml puro
 
-Dashboard responsivo de criptoativos, escrito em GITML puro em index.gitml. O gráfico BTC/USDT é incorporado do TradingView; os valores de saldo e da lista de ativos.
+## Modo de uso: 
 
 
-<p align="center">
-  <img src="assets/orbita-crypto.png" alt="GITML — linguagem de marcação para a web" width="960">
-</p>
-
-## Site feito com gitml puro  
-
-<p align="center">
-  <img src="assets/site-gitml.png" alt="GITML — linguagem de marcação para a web" width="960">
-</p>
-
-## Modo de uso:
-
-  
 ## 💻 Extensão do VS Code
 
 
-## Depois, pressione Ctrl + Shift + X, procure GITML e abra a extensão.
+ Pressione Ctrl + Shift + X, procure GITML e abra a extensão.
 
 Pronto! 🚀
 
@@ -166,9 +191,12 @@ gitml start index.gitml
 
 ## ⚡ CLI — terminal
 
+
 ### Instalação global
 
 Para disponibilizar o comando `gitml` no terminal:
+
+## 🖥️ Executar 0 pacote NPM:
 
 ```bash
 npm install -g gitml
@@ -216,7 +244,7 @@ gitml serve 3000 loja.gitml
 
 > Nos exemplos seguintes, `gitml` considera a instalação global. Se instalou localmente, use `npx gitml`.
 
-## 🛠️ Crie seu projeto
+## 🛠️ Crie seu projeto em um comando
 
 Crie uma nova estrutura:
 
@@ -230,6 +258,7 @@ Entre na pasta e inicie:
 cd meu-projeto
 gitml dev
 ```
+
 
 ## 📦 Estrutura de um projeto
 
@@ -246,6 +275,31 @@ meu-projeto/
 │   └── icons/
 └── README.md
 ```
+
+
+
+
+
+
+
+## Destaque: Crypto Platform criado com gitml puro
+
+Dashboard responsivo de criptoativos, escrito em GITML puro em index.gitml. O gráfico BTC/USDT é incorporado do TradingView; os valores de saldo e da lista de ativos.
+
+
+<p align="center">
+  <img src="assets/orbita-crypto.png" alt="GITML — linguagem de marcação para a web" width="960">
+</p>
+
+
+
+## Site feito com gitml puro  
+
+<p align="center">
+  <img src="assets/site-gitml.png" alt="GITML — linguagem de marcação para a web" width="960">
+</p>
+
+
 
 ## 🎨 Sua primeira página
 
@@ -603,20 +657,6 @@ Também é possível utilizar blocos GITML dentro de documentos HTML:
 
 A extensão VS Code oferece suporte ao reconhecimento de blocos `text/gitml` dentro de documentos HTML.
 
-## 🖥️ Executar com o CLI
-
-Na raiz do projeto, utilize:
-
-```bash
-node bin/gitml.js dev index.gitml --port 3000 --open
-```
-
-Esse comando inicia o ambiente local e abre o projeto no navegador.
-
-Você também pode utilizar outra porta:
-
-```bash
-node bin/gitml.js dev index.gitml --port 4173 --open
 ```
 
 ## 💻 Executar com a extensão do VS Code
