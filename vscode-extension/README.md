@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="assets/vscode-extension/vscode-gitml.png" alt="GITML — linguagem de marcação para a web" width="960">
-</p>
+
 
 
 # GITML para VS Code
@@ -40,6 +38,10 @@ O ícone vem junto com a linguagem e funciona com o tema de ícones padrão. Se 
 | `gitml.autoCloseTags` | `true` | fecha a tag ao digitar `>` |
 | `gitml.server.port` | `4173` | porta inicial do servidor local |
 | `gitml.preview.allowScripts` | `true` | permite `<script>` do arquivo na prévia (só em pastas confiáveis) |
+
+
+
+---
 
 
 <p align="center">
@@ -781,8 +783,12 @@ Consulte o arquivo de licença presente no repositório para conhecer as condiç
 ## Autor 
 gislainelophes@gmail.com
 
+
+
+
+
 MIT · https://github.com/Gislaine-web3/gitml-language-npm
 
 
 
-MIT · https://github.com/Gislaine-web3/gitml-extension-src
+

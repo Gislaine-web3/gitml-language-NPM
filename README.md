@@ -86,7 +86,16 @@
   <a href="https://github.com/Gislaine-web3/gitml-language-npm/issues">Reportar problema</a>
 </p>
 ---
+<div align="center">
 
+![GITML Componentes](https://img.shields.io/badge/GITML_Componentes-Explore_todos_os_recursos-10b981?style=for-the-badge&logo=visualstudiocode&logoColor=white)
+
+> 💡 **Conheça todos os componentes GITML!** Rode no seu terminal:
+> ```bash
+> gitml componentes
+> ```
+
+</div>
  
 # GITML — Linguagem de Marcação para Interfaces Web
 
@@ -129,6 +138,41 @@ Este repositório reúne as ferramentas do projeto:
 
 ---
 
+## 📋 Comandos
+
+| Comando | O que faz |
+| :--- | :--- |
+| `gitml start [arquivo\|pasta\|porta]` | Inicia o servidor e abre o navegador |
+| `gitml serve [porta]` | Inicia somente o servidor |
+| `gitml serve 3000 loja.gitml` | Serve um arquivo específico na porta indicada |
+| `gitml new <nome>` | Cria um projeto |
+| `gitml check [arquivos]` | Procura erros nos arquivos |
+| `gitml build [arquivo]` | Gera a saída em `dist/` |
+| `gitml fmt <arquivo>` | Formata um arquivo |
+| `gitml components` | Lista os componentes disponíveis |
+
+### Exemplos rápidos
+
+```bash
+# Abrir uma página no navegador
+gitml start index.gitml
+
+# Iniciar somente o servidor
+gitml serve 3000
+
+# Verificar a página
+gitml check index.gitml
+
+# Formatar o arquivo
+gitml fmt index.gitml
+
+# Gerar o site
+gitml build index.gitml
+
+# Explorar os componentes
+gitml components
+```
+
 ## ✨ Principais recursos
 
 - **HTML semântico:** suporte a `header`, `nav`, `main`, `section`, `article`, `aside`, `footer`, `figure` e outros elementos.
@@ -143,7 +187,24 @@ Este repositório reúne as ferramentas do projeto:
 - **CLI:** execução e visualização local dos projetos.
 
 
+<p align="center">
+  <img src="./gitml-code-.png" alt="GITML Code Preview" width="900" />
+</p>
 
+<p align="center">
+  <a href="https://www.npmjs.com/package/gitml">
+    <img src="https://img.shields.io/badge/npm-v0.1.2-blue?style=for-the-badge&logo=npm&logoColor=white" alt="NPM Version">
+  </a>
+  <a href="https://github.com/Gislaine-web3/gitml-language-NPM/actions">
+    <img src="https://img.shields.io/badge/GitHub_Actions-Passing-success?style=for-the-badge&logo=githubactions&logoColor=white" alt="Actions Status">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/Gislaine-web3/gitml-language-NPM">
+    <img src="https://img.shields.io/badge/Conheça_todos_os_componentes_GITML-Rode_no_terminal:_gitml_componentes-0ea5e9?style=for-the-badge&logo=gnubash&logoColor=white" alt="Conheça todos os componentes GITML">
+  </a>
+</p>
 
   Escolha como deseja trabalhar:
 
@@ -737,3 +798,43 @@ Consulte o arquivo de licença presente no repositório para conhecer as condiç
 
 ## Autor 
 gislainelophes@gmail.com
+
+
+## 🌱 Ecossistema GBit
+
+GITML faz parte do ecossistema **GBit**, criado por **Gislaine-web3**.
+
+Uma iniciativa que conecta linguagem, ferramentas e experimentação para transformar ideias em projetos.
+
+| Projeto | Papel |
+| :--- | :--- |
+| GITML | Linguagem e componentes para páginas |
+| GITML CLI | Ferramentas de desenvolvimento no terminal |
+| Extensão VS Code | Integração com o editor |
+| GBit Shell | Ambiente de terminal do ecossistema |
+
+## 👩‍💻 Autora
+
+Criado por **Gislaine-web3**.
+
+- [Perfil no GitHub](https://github.com/Gislaine-web3)
+- [Repositório GITML](https://github.com/Gislaine-web3/gitml-language-npm)
+- [Pacote no npm](https://www.npmjs.com/package/gitml)
+
+## 📄 Licença
+
+Distribuído sob a licença **MIT**.
+
+Consulte o arquivo [LICENSE](LICENSE) para mais informações.
+
+---
+
+<p align="center">
+  <strong>GITML · Crie. Visualize. Evolua.</strong><br>
+  Uma linguagem do ecossistema GBit.
+</p>
+
+<p align="center">
+  <a href="#gitml">↑ Voltar ao topo</a>
+</p>
+
