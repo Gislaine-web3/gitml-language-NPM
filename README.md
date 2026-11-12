@@ -206,6 +206,11 @@ gitml components
   </a>
 </p>
 
+> ```bash
+ >npx gitml componentes
+>```
+ 
+  
   Escolha como deseja trabalhar:
 
 - **VS Code:** instale a extensão para usar o GITML dentro do editor.
