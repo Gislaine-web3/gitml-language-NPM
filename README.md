@@ -96,7 +96,14 @@
 > ```
 
 </div>
- 
+
+ <p align="center">
+  <a href="https://www.npmjs.com/package/gitml" target="_blank">
+    <img src="https://img.shields.io/badge/NPM-Instalar_Pacote_GITML-CB3837?style=for-the-badge&logo=npm&logoColor=white" alt="Acessar GITML no NPM" height="45" />
+  </a>
+</p>
+
+
 # GITML — Linguagem de Marcação para Interfaces Web
 
 **Crie sites modernos usando uma sintaxe simples, componentes declarativos e HTML semântico.**
